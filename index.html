@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Daigu Technology</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Daigu Technology — Innovation technologique, ingénierie électronique et développement logiciel." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #111827;
+      background: #0b1020;
+    }
+    header {
+      background: radial-gradient(circle at top left, #1f2937, #020617);
+      color: #f9fafb;
+      padding: 3rem 1.5rem 4rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    header p {
+      max-width: 640px;
+      margin: 0.5rem auto 0;
+      color: #e5e7eb;
+    }
+    main {
+      max-width: 960px;
+      margin: -2rem auto 3rem;
+      padding: 0 1.5rem 2rem;
+    }
+    .card {
+      background: #020617;
+      border-radius: 1rem;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+    h2 {
+      font-size: 1.4rem;
+      margin: 2rem 0 0.75rem;
+      color: #e5e7eb;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+    }
+    p, li {
+      color: #cbd5f5;
+      font-size: 0.98rem;
+    }
+    p + p {
+      margin-top: 0.75rem;
+    }
+    ul {
+      list-style: none;
+      margin-top: 0.75rem;
+    }
+    li {
+      margin: 0.4rem 0;
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+    }
+    li::before {
+      content: "▹";
+      color: #38bdf8;
+      margin-top: 0.1rem;
+      font-size: 0.8rem;
+    }
+    strong {
+      color: #e5e7eb;
+      font-weight: 600;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+      margin-top: 1rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #e5e7eb;
+      margin: 0.25rem 0.25rem 0 0;
+    }
+    .pill span {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #38bdf8;
+    }
+    .section-intro {
+      font-size: 0.95rem;
+      color: #9ca3af;
+      margin-bottom: 0.5rem;
+    }
+    .contact {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(55, 65, 81, 0.8);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .contact a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem 2.5rem;
+      color: #6b7280;
+      font-size: 0.8rem;
+    }
+    footer span {
+      color: #e5e7eb;
+    }
+    @media (max-width: 640px) {
+      header { padding: 2.5rem 1.25rem 3.25rem; }
+      .card { padding: 2rem 1.5rem; }
+      header h1 { font-size: 2.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Daigu Technology</h1>
+    <p>
+      Construire l’avenir, une innovation à la fois — ingénierie électronique, développement logiciel
+      et intégration technologique au service d’idées ambitieuses.
+    </p>
+  </header>
+
+  <main>
+    <section class="card">
+      <section>
+        <h2>Vision</h2>
+        <p>
+          Daigu Technology est une entreprise d’innovation dédiée à la création de solutions
+          technologiques élégantes, efficaces et accessibles. Fondée avec l’ambition de repousser
+          les limites de l’ingénierie moderne, Daigu Technology développe des produits qui allient
+          performance, design et simplicité.
+        </p>
+      </section>
+
+      <section>
+        <h2>Mission</h2>
+        <p>
+          Notre mission est de transformer des idées audacieuses en technologies concrètes qui
+          améliorent la vie quotidienne. Nous adoptons une approche centrée sur l’utilisateur,
+          soutenue par une recherche rigoureuse et une exécution technique irréprochable.
+        </p>
+      </section>
+
+      <section>
+        <h2>Domaines d’expertise</h2>
+        <p class="section-intro">
+          Un socle technique solide pour passer du concept au prototype, puis au produit.
+        </p>
+        <div class="grid">
+          <div>
+            <h3 class="section-intro">Ingénierie électronique</h3>
+            <ul>
+              <li><strong>Systèmes embarqués</strong> — conception de cartes, microcontrôleurs, capteurs.</li>
+              <li><strong>Prototypage</strong> — itérations rapides pour valider les idées.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="section-intro">Développement logiciel</h3>
+            <ul>
+              <li><strong>Applications</strong> — outils métiers, interfaces dédiées.</li>
+              <li><strong>Outils internes</strong> — automatisation, scripts, services.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="section-intro">Innovation & intégration</h3>
+            <ul>
+              <li><strong>Innovation produit</strong> — recherche, design, expérience utilisateur.</li>
+              <li><strong>Intégration technologique</strong> — solutions sur mesure pour entreprises et particuliers.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Valeurs</h2>
+        <p class="section-intro">
+          Une culture d’ingénierie exigeante, tournée vers la clarté et la fiabilité.
+        </p>
+        <div>
+          <span class="pill"><span></span>Précision</span>
+          <span class="pill"><span></span>Créativité</span>
+          <span class="pill"><span></span>Fiabilité</span>
+          <span class="pill"><span></span>Transparence</span>
+        </div>
+        <p>
+          Chaque projet est abordé avec une attention particulière aux détails, une volonté
+          d’explorer des solutions originales, et l’exigence de livrer des systèmes robustes,
+          documentés et compréhensibles.
+        </p>
+      </section>
+
+      <section>
+        <h2>Projets</h2>
+        <p>
+          Daigu Technology travaille sur plusieurs projets en développement, allant de dispositifs
+          électroniques intelligents à des plateformes logicielles avancées. Chaque initiative est
+          guidée par une exigence d’excellence technique et une vision à long terme.
+        </p>
+        <p>
+          Les projets peuvent être orientés <strong>R&D</strong>, <strong>produits propriétaires</strong> ou
+          <strong>solutions sur mesure</strong> pour des partenaires industriels ou institutionnels.
+        </p>
+      </section>
+
+      <section class="contact">
+        <h2>Contact</h2>
+        <p>
+          Pour toute demande de collaboration, d’information ou de partenariat :
+        </p>
+        <p>
+          <strong>Email :</strong>
+          <a href="mailto:contact@daigu.tech">contact@daigu.tech</a>
+        </p>
+        <p>
+          <strong>Localisation :</strong> Allemagne, NRW
+        </p>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <span>Daigu Technology</span> — Construire l’avenir, une innovation à la fois.
+  </footer>
+</body>
+</html>
