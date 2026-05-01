@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="DAIGU TECHNOLOGY — La Guinée des Lumières. Écosystème technologique souverain : OS, Cloud, Cybersécurité, Électronique, Énergie, Formation.">
+    <meta name="description" content="DAIGU TECHNOLOGY — La Guinée des Lumières. Écosystème technologique souverain.">
     <meta property="og:title" content="DAIGU TECHNOLOGY — La Guinée des Lumières">
-    <meta property="og:description" content="Soyez des fous à la porte de la raison des hommes. — Henry Mathieu Haba">
+    <meta property="og:description" content="Soyez des fous à la porte de la raison des hommes.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://henry-mathieu-haba.github.io/daigu-technology/">
     <title>DAIGU TECHNOLOGY | La Guinée des Lumières</title>
@@ -16,17 +16,14 @@
 <body>
 
     <!-- NAVIGATION -->
-    <header class="header" id="header">
-        <div class="header-inner">
-            <a href="#home" class="logo">
-                <span class="logo-text">DAIGU</span>
-                <span class="logo-dot">.</span>
-                <span class="logo-sub">TECHNOLOGY</span>
-            </a>
-            <nav class="nav" id="nav">
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">DAIGU<span>.</span></a>
+            <div class="nav-links" id="navLinks">
                 <a href="#ecosystem" data-i18n="nav_ecosystem">Écosystème</a>
                 <a href="#produkte" data-i18n="nav_products">Produits</a>
                 <a href="#filiales" data-i18n="nav_filiales">Filiales</a>
+                <a href="#video" data-i18n="nav_video">Vision</a>
                 <a href="#roadmap" data-i18n="nav_roadmap">Roadmap</a>
                 <a href="#kontakt" data-i18n="nav_contact">Contact</a>
                 <div class="nav-lang">
@@ -34,293 +31,307 @@
                     <button class="lang-btn" data-lang="en">EN</button>
                     <button class="lang-btn" data-lang="zh">中文</button>
                 </div>
-            </nav>
+            </div>
             <button class="burger" id="burger" aria-label="Menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
-    </header>
+    </nav>
 
-    <main>
-
-        <!-- ========== HERO ========== -->
-        <section class="hero" id="home">
-            <div class="hero-bg">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80" alt="DAIGU Technology Abstract">
+    <!-- ========== HERO — Plein écran avec parallaxe ========== -->
+    <section class="hero" id="home">
+        <div class="hero-bg" data-parallax="0.3">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920&q=80" alt="DAIGU Technology">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content" data-reveal>
+            <p class="hero-badge" data-i18n="hero_badge">DAIGU TECHNOLOGY • Guinée 2026</p>
+            <h1 class="hero-title">
+                <span class="hero-line1" data-i18n="hero_line1">La Guinée des</span>
+                <span class="hero-line2" data-i18n="hero_line2">Lumières</span>
+            </h1>
+            <p class="hero-motto">»<span data-i18n="hero_motto">Soyez des fous à la porte de la raison des hommes</span>«</p>
+            <p class="hero-author">— Henry Mathieu Haba</p>
+            <div class="hero-arrow">
+                <svg width="24" height="40" viewBox="0 0 24 40"><rect x="10" y="4" width="4" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="32" r="3" fill="currentColor"/></svg>
+                <span data-i18n="hero_scroll">Découvrir</span>
             </div>
-            <div class="hero-content">
-                <div class="hero-badge" data-i18n="hero_badge">Guinée • 2026</div>
-                <h1 class="hero-title">
-                    <span class="hero-title-main" data-i18n="hero_title_main">La Guinée des</span>
-                    <span class="hero-title-accent" data-i18n="hero_title_accent">Lumières</span>
-                </h1>
-                <p class="hero-motto">»<span data-i18n="hero_motto">Soyez des fous à la porte de la raison des hommes</span>«</p>
-                <p class="hero-author">— Henry Mathieu Haba</p>
-                <div class="hero-scroll">
-                    <span data-i18n="hero_scroll">Découvrir le projet</span>
-                    <svg width="16" height="24" viewBox="0 0 16 24"><rect x="7" y="2" width="2" height="14" rx="1" fill="none" stroke="currentColor" stroke-width="1"/><circle cx="8" cy="20" r="1.5" fill="currentColor"/></svg>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ========== ÉCOSYSTÈME ========== -->
-        <section class="section" id="ecosystem">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag" data-i18n="eco_tag">Architecture</span>
-                    <h2 class="section-title" data-i18n="eco_title">Un écosystème complet et souverain</h2>
-                    <p class="section-lead" data-i18n="eco_lead">Trois piliers fondateurs pour une indépendance technologique durable. Du laboratoire à l'université, chaque maillon est intégré.</p>
-                </div>
-                <div class="card-grid card-grid-3">
-                    <article class="card">
-                        <div class="card-img">
-                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" alt="DAIGU LABORATORY CENTER">
-                        </div>
-                        <div class="card-body">
-                            <span class="card-tag" data-i18n="eco_dlc_tag">Recherche & Développement</span>
-                            <h3 class="card-title">DAIGU LABORATORY CENTER</h3>
-                            <p data-i18n="eco_dlc_desc">Le Cerveau. Jumeaux numériques, intelligence artificielle, prototypage rapide. Le bureau des projets de convergence.</p>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card-img">
-                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="DAIGU TECHNOLOGY">
-                        </div>
-                        <div class="card-body">
-                            <span class="card-tag" data-i18n="eco_tech_tag">Stratégie & Pilotage</span>
-                            <h3 class="card-title">DAIGU TECHNOLOGY</h3>
-                            <p data-i18n="eco_tech_desc">Le Corps. Holding stratégique, protection des brevets, pilotage à horizon 2030-2050. Fonds de dotation verrouillé.</p>
-                        </div>
-                    </article>
-                    <article class="card">
-                        <div class="card-img">
-                            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&q=80" alt="DAIGU UNIVERSITY">
-                        </div>
-                        <div class="card-body">
-                            <span class="card-tag" data-i18n="eco_duts_tag">Formation & Excellence</span>
-                            <h3 class="card-title">DAIGU UNIVERSITY (DUTS)</h3>
-                            <p data-i18n="eco_duts_desc">Le Sang. Écoles d'ingénierie système, électronique, chimie énergétique et cryptographie. L'étudiant est co-créateur.</p>
-                        </div>
-                    </article>
-                </div>
+    <!-- ========== SECTION 1 — ÉCOSYSTÈME (images full-width alternées) ========== -->
+    <section class="story-panel" id="ecosystem">
+        <div class="story-row">
+            <div class="story-image" data-reveal>
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80" alt="DAIGU LABORATORY CENTER">
             </div>
-        </section>
-
-        <!-- ========== BANNIÈRE CITATION ========== -->
-        <section class="quote-banner">
-            <div class="container">
-                <blockquote>
-                    <p>»<span data-i18n="quote_text">De l'Atome au Logiciel, tout est pensé, conçu et sécurisé ici</span>«</p>
-                    <footer data-i18n="quote_source">— Doctrine DAIGU, Livre Blanc Stratégique</footer>
-                </blockquote>
+            <div class="story-text" data-reveal>
+                <span class="story-tag" data-i18n="s1_tag">Recherche & Développement</span>
+                <h2>DAIGU LABORATORY CENTER</h2>
+                <p data-i18n="s1_desc">Le Cerveau de l'écosystème. Au cœur de Conakry, nos chercheurs développent les jumeaux numériques, l'intelligence artificielle et les prototypes qui alimentent toutes nos filiales. Un laboratoire souverain pour une innovation sans dépendance.</p>
             </div>
-        </section>
-
-        <!-- ========== PRODUITS ========== -->
-        <section class="section section-alt" id="produkte">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag" data-i18n="prod_tag">Portfolio</span>
-                    <h2 class="section-title" data-i18n="prod_title">Nos domaines d'innovation</h2>
-                    <p class="section-lead" data-i18n="prod_lead">Huit verticales technologiques intégrées, toutes alimentées par notre système d'exploitation souverain DAIGU OS.</p>
-                </div>
-                <div class="card-grid card-grid-4">
-                    <div class="card card-produkt">
-                        <div class="card-img"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&q=80" alt="DAIGU Phone"></div>
-                        <div class="card-body"><h3>DAIGU Phone</h3><p data-i18n="prod_phone">Smartphone sous DAIGU OS</p></div>
-                    </div>
-                    <div class="card card-produkt">
-                        <div class="card-img"><img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=600&q=80" alt="DAIGU Console"></div>
-                        <div class="card-body"><h3>DAIGU Console</h3><p data-i18n="prod_console">Console de jeu nouvelle génération</p></div>
-                    </div>
-                    <div class="card card-produkt">
-                        <div class="card-img"><img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?w=600&q=80" alt="DAIGU PC"></div>
-                        <div class="card-body"><h3>DAIGU Station</h3><p data-i18n="prod_pc">PC & stations de travail</p></div>
-                    </div>
-                    <div class="card card-produkt">
-                        <div class="card-img"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="DAIGU OS"></div>
-                        <div class="card-body"><h3>DAIGU OS</h3><p data-i18n="prod_os">Système d'exploitation souverain</p></div>
-                    </div>
-                    <div class="card card-produkt">
-                        <div class="card-img"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80" alt="DAIGU Cloud"></div>
-                        <div class="card-body"><h3>DAIGU Cloud</h3><p data-i18n="prod_cloud">Cloud national guinéen</p></div>
-                    </div>
-                    <div class="card card-produkt">
-                        <div class="card-img"><img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=600&q=80" alt="DAIGU EV"></div>
-                        <div class="card-body"><h3>DAIGU EV</h3><p data-i18n="prod_ev">Véhicule électrique africain</p></div>
-                    </div>
-                    <div class="card card-produkt">
-                        <div class="card-img"><img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?w=600&q=80" alt="DAIGU Shield"></div>
-                        <div class="card-body"><h3>DAIGU Shield</h3><p data-i18n="prod_cyber">Cybersécurité Zéro Trust</p></div>
-                    </div>
-                    <div class="card card-produkt">
-                        <div class="card-img"><img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80" alt="DAIGU Air"></div>
-                        <div class="card-body"><h3>DAIGU Air</h3><p data-i18n="prod_drone">Drones & IoT tropicalisés</p></div>
-                    </div>
-                </div>
+        </div>
+        <div class="story-row story-row-reverse">
+            <div class="story-image" data-reveal>
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="DAIGU TECHNOLOGY">
             </div>
-        </section>
+            <div class="story-text" data-reveal>
+                <span class="story-tag" data-i18n="s2_tag">Stratégie & Pilotage</span>
+                <h2>DAIGU TECHNOLOGY</h2>
+                <p data-i18n="s2_desc">Le Corps. La holding qui verrouille le capital, protège les brevets et oriente la stratégie sur 30 ans. Un fonds de dotation garantit que les profits retournent à la formation et à la recherche.</p>
+            </div>
+        </div>
+        <div class="story-row">
+            <div class="story-image" data-reveal>
+                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80" alt="DAIGU UNIVERSITY">
+            </div>
+            <div class="story-text" data-reveal>
+                <span class="story-tag" data-i18n="s3_tag">Formation & Excellence</span>
+                <h2>DAIGU UNIVERSITY (DUTS)</h2>
+                <p data-i18n="s3_desc">Le Sang. Ici, l'étudiant est un co-créateur. Chaque promotion travaille sur des projets réels des filiales, encadrée par les ingénieurs de DLC. Pas de simulacre : du code, des prototypes, de la souveraineté.</p>
+            </div>
+        </div>
+    </section>
 
-        <!-- ========== FILIALES ========== -->
-        <section class="section" id="filiales">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag" data-i18n="fil_tag">Structure opérationnelle</span>
-                    <h2 class="section-title" data-i18n="fil_title">La pile technologique</h2>
-                    <p class="section-lead" data-i18n="fil_lead">Quatre filiales, une chaîne de valeur verticale. Chaque couche alimente celle du dessus.</p>
+    <!-- ========== SECTION 2 — VIDÉO IMMERSIVE ========== -->
+    <section class="video-panel" id="video">
+        <div class="video-overlay"></div>
+        <video autoplay muted loop playsinline class="video-bg">
+            <source src="https://cdn.leonardo.ai/videos/production-line-futuristic.mp4" type="video/mp4">
+            <!-- Fallback image si la vidéo ne charge pas -->
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&q=80" alt="DAIGU Production">
+        </video>
+        <div class="video-content" data-reveal>
+            <span class="story-tag" data-i18n="video_tag">Production du Futur</span>
+            <h2 data-i18n="video_title">L'Usine Intelligente</h2>
+            <p data-i18n="video_desc">Des chaînes de montage automatisées aux véhicules électriques conçus pour l'Afrique. DAIGU construit l'industrie de demain, aujourd'hui.</p>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 3 — PRODUITS (grille immersive) ========== -->
+    <section class="products-panel" id="produkte">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="story-tag" data-i18n="prod_tag">Portfolio</span>
+                <h2 data-i18n="prod_title">L'Écosystème Produits</h2>
+                <p class="section-sub" data-i18n="prod_sub">Huit verticales intégrées, toutes alimentées par DAIGU OS.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card" data-reveal>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&q=80" alt="DAIGU Phone">
+                    </div>
+                    <div class="product-info">
+                        <h3>DAIGU Phone</h3>
+                        <p data-i18n="prod_phone">Smartphone souverain</p>
+                    </div>
                 </div>
-                <div class="stack">
-                    <div class="stack-item">
-                        <div class="stack-num">04</div>
-                        <div class="stack-content">
-                            <h3>DAIGU ELECTRONICS</h3>
-                            <p data-i18n="fil_04_desc">Matériel & Intégration. Drones, tablettes durcies, équipements réseau. Conception « TROPIC-PROOF ».</p>
-                        </div>
-                        <span class="stack-role" data-i18n="fil_04_role">Sommet visible</span>
+                <div class="product-card" data-reveal>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=600&q=80" alt="DAIGU Console">
                     </div>
-                    <div class="stack-item">
-                        <div class="stack-num">03</div>
-                        <div class="stack-content">
-                            <h3>DAIGU CORE SYSTEMS</h3>
-                            <p data-i18n="fil_03_desc">Logiciel & IA. DAIGU OS (micro-noyau temps réel), IA agentique, moteur de jumeau numérique.</p>
-                        </div>
-                        <span class="stack-role" data-i18n="fil_03_role">Noyau souverain</span>
+                    <div class="product-info">
+                        <h3>DAIGU Console</h3>
+                        <p data-i18n="prod_console">Jeu nouvelle génération</p>
                     </div>
-                    <div class="stack-item">
-                        <div class="stack-num">02</div>
-                        <div class="stack-content">
-                            <h3>DAIGU CLOUD & SHIELD</h3>
-                            <p data-i18n="fil_02_desc">Cyber & Infrastructures. Cloud national guinéen, red team interne, architecture zéro trust, résilience offline.</p>
-                        </div>
-                        <span class="stack-role" data-i18n="fil_02_role">Bouclier</span>
+                </div>
+                <div class="product-card" data-reveal>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1597852074816-d933c7d2b988?w=600&q=80" alt="DAIGU PC">
                     </div>
-                    <div class="stack-item">
-                        <div class="stack-num">01</div>
-                        <div class="stack-content">
-                            <h3>DAIGU ENERGY LABS</h3>
-                            <p data-i18n="fil_01_desc">Matériaux & Batteries. Stockage stationnaire, valorisation des résidus de bauxite, micro-grids solaires.</p>
-                        </div>
-                        <span class="stack-role" data-i18n="fil_01_role">Base énergétique</span>
+                    <div class="product-info">
+                        <h3>DAIGU Station</h3>
+                        <p data-i18n="prod_pc">PC & stations de travail</p>
+                    </div>
+                </div>
+                <div class="product-card" data-reveal>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80" alt="DAIGU OS">
+                    </div>
+                    <div class="product-info">
+                        <h3>DAIGU OS</h3>
+                        <p data-i18n="prod_os">Système d'exploitation</p>
+                    </div>
+                </div>
+                <div class="product-card" data-reveal>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80" alt="DAIGU Cloud">
+                    </div>
+                    <div class="product-info">
+                        <h3>DAIGU Cloud</h3>
+                        <p data-i18n="prod_cloud">Cloud national</p>
+                    </div>
+                </div>
+                <div class="product-card" data-reveal>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=600&q=80" alt="DAIGU EV">
+                    </div>
+                    <div class="product-info">
+                        <h3>DAIGU EV</h3>
+                        <p data-i18n="prod_ev">Véhicule électrique</p>
+                    </div>
+                </div>
+                <div class="product-card" data-reveal>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1563770660941-20978e870e26?w=600&q=80" alt="DAIGU Shield">
+                    </div>
+                    <div class="product-info">
+                        <h3>DAIGU Shield</h3>
+                        <p data-i18n="prod_cyber">Cybersécurité</p>
+                    </div>
+                </div>
+                <div class="product-card" data-reveal>
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&q=80" alt="DAIGU Air">
+                    </div>
+                    <div class="product-info">
+                        <h3>DAIGU Air</h3>
+                        <p data-i18n="prod_drone">Drones & IoT</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ========== ROADMAP ========== -->
-        <section class="section section-alt" id="roadmap">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag" data-i18n="road_tag">Feuille de route</span>
-                    <h2 class="section-title" data-i18n="road_title">2026 – 2035</h2>
-                    <p class="section-lead" data-i18n="road_lead">Un plan décennal structuré en quatre phases, de la fondation juridique à l'expansion régionale.</p>
+    <!-- ========== SECTION 4 — CITATION ========== -->
+    <section class="quote-panel">
+        <div class="quote-bg" data-parallax="0.2">
+            <img src="https://images.unsplash.com/photo-1515634928627-2a4e0dae3ddf?w=1920&q=80" alt="Guinée">
+        </div>
+        <div class="quote-content" data-reveal>
+            <blockquote>
+                <p>»<span data-i18n="quote_text">De l'Atome au Logiciel, tout est pensé, conçu et sécurisé ici</span>«</p>
+                <footer data-i18n="quote_source">— Doctrine DAIGU</footer>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 5 — FILIALES ========== -->
+    <section class="stack-panel" id="filiales">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="story-tag" data-i18n="fil_tag">La Pile Technologique</span>
+                <h2 data-i18n="fil_title">Nos Filiales</h2>
+            </div>
+            <div class="stack">
+                <div class="stack-item" data-reveal>
+                    <div class="stack-num">04</div>
+                    <div class="stack-body">
+                        <h3>DAIGU ELECTRONICS</h3>
+                        <p data-i18n="fil_04">Matériel & Intégration — Drones, tablettes durcies, équipements réseau « TROPIC-PROOF ».</p>
+                    </div>
+                    <span class="stack-badge" data-i18n="fil_04_badge">Sommet</span>
                 </div>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"><span>01</span></div>
-                        <div class="timeline-card">
-                            <div class="timeline-phase" data-i18n="road_phase0">Phase 0</div>
-                            <h3 data-i18n="road_phase0_title">Fondations Silencieuses</h3>
-                            <p data-i18n="road_phase0_desc">Constitution juridique de la holding, ouverture de la première cohorte DUTS, acquisition du terrain DLC.</p>
-                            <span class="timeline-year" data-i18n="road_phase0_year">Année 1</span>
-                        </div>
+                <div class="stack-item" data-reveal>
+                    <div class="stack-num">03</div>
+                    <div class="stack-body">
+                        <h3>DAIGU CORE SYSTEMS</h3>
+                        <p data-i18n="fil_03">Logiciel & IA — DAIGU OS micro-noyau, IA agentique, moteur de jumeau numérique.</p>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker active"><span>02</span></div>
-                        <div class="timeline-card">
-                            <div class="timeline-phase" data-i18n="road_phase1">Phase 1</div>
-                            <h3 data-i18n="road_phase1_title">Noyau Souverain</h3>
-                            <p data-i18n="road_phase1_desc">Sortie de DAIGU OS Lite V0.1. Lancement du Cloud privé guinéen. Premiers projets de convergence.</p>
-                            <span class="timeline-year" data-i18n="road_phase1_year">Année 2 – 4</span>
-                        </div>
+                    <span class="stack-badge" data-i18n="fil_03_badge">Noyau</span>
+                </div>
+                <div class="stack-item" data-reveal>
+                    <div class="stack-num">02</div>
+                    <div class="stack-body">
+                        <h3>DAIGU CLOUD & SHIELD</h3>
+                        <p data-i18n="fil_02">Cyber & Infra — Cloud national, Red Team interne, Zéro Trust, résilience offline.</p>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"><span>03</span></div>
-                        <div class="timeline-card">
-                            <div class="timeline-phase" data-i18n="road_phase2">Phase 2</div>
-                            <h3 data-i18n="road_phase2_title">Incarnation Physique</h3>
-                            <p data-i18n="road_phase2_desc">Assemblage du premier terminal autonome : tablette durcie sous DAIGU OS. Production pilote de batteries.</p>
-                            <span class="timeline-year" data-i18n="road_phase2_year">Année 4 – 7</span>
-                        </div>
+                    <span class="stack-badge" data-i18n="fil_02_badge">Bouclier</span>
+                </div>
+                <div class="stack-item" data-reveal>
+                    <div class="stack-num">01</div>
+                    <div class="stack-body">
+                        <h3>DAIGU ENERGY LABS</h3>
+                        <p data-i18n="fil_01">Matériaux & Batteries — Stockage, valorisation bauxite, micro-grids solaires.</p>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"><span>04</span></div>
-                        <div class="timeline-card">
-                            <div class="timeline-phase" data-i18n="road_phase3">Phase 3</div>
-                            <h3 data-i18n="road_phase3_title">Démultiplication</h3>
-                            <p data-i18n="road_phase3_desc">Expansion régionale du Cloud. DAIGU OS sur TV et véhicules. DUTS ouvre ses portes à la sous-région.</p>
-                            <span class="timeline-year" data-i18n="road_phase3_year">Année 7 – 10</span>
-                        </div>
+                    <span class="stack-badge" data-i18n="fil_01_badge">Base</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SECTION 6 — ROADMAP ========== -->
+    <section class="timeline-panel" id="roadmap">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="story-tag" data-i18n="road_tag">Feuille de Route</span>
+                <h2 data-i18n="road_title">2026 – 2035</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-reveal>
+                    <div class="timeline-dot active"></div>
+                    <div class="timeline-body">
+                        <span class="timeline-phase" data-i18n="tl_phase0">Phase 0</span>
+                        <h3 data-i18n="tl_0_title">Fondations Silencieuses</h3>
+                        <p data-i18n="tl_0_desc">Constitution de la holding, ouverture DUTS, acquisition DLC.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-body">
+                        <span class="timeline-phase" data-i18n="tl_phase1">Phase 1</span>
+                        <h3 data-i18n="tl_1_title">Noyau Souverain</h3>
+                        <p data-i18n="tl_1_desc">DAIGU OS V0.1, Cloud privé guinéen.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-body">
+                        <span class="timeline-phase" data-i18n="tl_phase2">Phase 2</span>
+                        <h3 data-i18n="tl_2_title">Incarnation Physique</h3>
+                        <p data-i18n="tl_2_desc">Premier terminal autonome, production pilote de batteries.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-body">
+                        <span class="timeline-phase" data-i18n="tl_phase3">Phase 3</span>
+                        <h3 data-i18n="tl_3_title">Démultiplication</h3>
+                        <p data-i18n="tl_3_desc">Expansion régionale, DAIGU OS multi-support.</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ========== CONTACT ========== -->
-        <section class="section" id="kontakt">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag" data-i18n="ctc_tag">Contact</span>
-                    <h2 class="section-title" data-i18n="ctc_title">Partenariat stratégique</h2>
-                    <p class="section-lead" data-i18n="ctc_lead">DAIGU est ouvert à la coopération bilatérale dans le cadre des Ateliers Luban et du FOCAC.</p>
-                </div>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <div class="contact-block">
-                            <h4 data-i18n="ctc_address_title">Adresse</h4>
-                            <p>Conakry, République de Guinée</p>
-                        </div>
-                        <div class="contact-block">
-                            <h4 data-i18n="ctc_email_title">Email</h4>
-                            <p><a href="mailto:architecture@daigu-technology.com">architecture@daigu-technology.com</a></p>
-                        </div>
-                        <div class="contact-block">
-                            <h4 data-i18n="ctc_private_title">Espace Partenaires</h4>
-                            <p><a href="private/" data-i18n="ctc_private_link">🔒 Accès sécurisé</a></p>
-                        </div>
+    <!-- ========== SECTION 7 — PARTENARIAT ========== -->
+    <section class="partner-panel" id="kontakt">
+        <div class="container">
+            <div class="partner-grid">
+                <div class="partner-text" data-reveal>
+                    <span class="story-tag" data-i18n="partner_tag">Partenariat</span>
+                    <h2 data-i18n="partner_title">Construisons l'avenir ensemble</h2>
+                    <p data-i18n="partner_desc">DAIGU est ouvert à la coopération bilatérale dans le cadre des Ateliers Luban et du FOCAC. Nous collaborons avec des partenaires qui partagent notre vision de souveraineté technologique.</p>
+                    <div class="partner-contacts">
+                        <p>📍 Conakry, République de Guinée</p>
+                        <p>📧 architecture@daigu-technology.com</p>
+                        <a href="private/" data-i18n="partner_private">🔒 Espace Partenaires</a>
                     </div>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-row">
-                            <input type="text" name="name" placeholder="Nom" required>
-                            <input type="email" name="email" placeholder="Email" required>
-                        </div>
+                </div>
+                <div class="partner-form" data-reveal>
+                    <form id="contactForm">
+                        <input type="text" name="name" placeholder="Nom" required>
+                        <input type="email" name="email" placeholder="Email" required>
                         <input type="text" name="organization" placeholder="Organisation">
                         <textarea name="message" rows="4" placeholder="Votre message" required></textarea>
-                        <div class="form-footer">
-                            <p class="form-note" data-i18n="ctc_form_note">Nous répondons sous 48 heures.</p>
-                            <button type="submit" class="btn-primary" data-i18n="ctc_send">Envoyer</button>
-                        </div>
+                        <button type="submit" data-i18n="partner_send">Envoyer</button>
                     </form>
                 </div>
             </div>
-        </section>
-
-    </main>
+        </div>
+    </section>
 
     <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="footer-logo">DAIGU<span>.</span></div>
-                    <p class="footer-motto">»<span data-i18n="footer_motto">Soyez des fous à la porte de la raison des hommes</span>«</p>
-                    <p class="footer-author">— Henry Mathieu Haba</p>
-                </div>
-                <div class="footer-links">
-                    <h4 data-i18n="footer_nav_title">Navigation</h4>
-                    <a href="#ecosystem" data-i18n="nav_ecosystem">Écosystème</a>
-                    <a href="#produkte" data-i18n="nav_products">Produits</a>
-                    <a href="#filiales" data-i18n="nav_filiales">Filiales</a>
-                    <a href="#roadmap" data-i18n="nav_roadmap">Roadmap</a>
-                </div>
-                <div class="footer-links">
-                    <h4 data-i18n="footer_docs_title">Documents</h4>
-                    <a href="documents/livre-blanc.pdf" data-i18n="footer_doc_wp">Livre Blanc (PDF)</a>
-                    <a href="documents/dossier-partenariat.pdf" data-i18n="footer_doc_partner">Dossier Partenariat (PDF)</a>
-                    <a href="private/" data-i18n="footer_private">Espace Partenaires</a>
-                </div>
+            <div class="footer-top">
+                <a href="#home" class="footer-logo">DAIGU<span>.</span></a>
+                <p class="footer-motto">»<span data-i18n="footer_motto">Soyez des fous à la porte de la raison des hommes</span>«</p>
+                <p class="footer-author">— Henry Mathieu Haba</p>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 DAIGU TECHNOLOGY. <span data-i18n="footer_copy">La Guinée des Lumières.</span></p>
+                <p>© 2026 DAIGU TECHNOLOGY</p>
+                <p data-i18n="footer_tagline">La Guinée des Lumières</p>
             </div>
         </div>
     </footer>

@@ -1,107 +1,128 @@
 // ============================================
-// DAIGU TECHNOLOGY — SCRIPTS
+// DAIGU TECHNOLOGY — Scripts Immersifs
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
 
     // --- BURGER ---
     const burger = document.getElementById('burger');
-    const nav = document.getElementById('nav');
+    const navLinks = document.getElementById('navLinks');
     burger.addEventListener('click', () => {
         burger.classList.toggle('active');
-        nav.classList.toggle('active');
-        document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+        navLinks.classList.toggle('active');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     });
-    document.querySelectorAll('.nav a').forEach(link => {
+    document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
             burger.classList.remove('active');
-            nav.classList.remove('active');
+            navLinks.classList.remove('active');
             document.body.style.overflow = '';
         });
     });
 
-    // --- TRADUCTIONS ---
+    // --- NAV SCROLL ---
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // --- PARALLAXE ---
+    const parallaxElements = document.querySelectorAll('[data-parallax]');
+    window.addEventListener('scroll', () => {
+        parallaxElements.forEach(el => {
+            const speed = parseFloat(el.getAttribute('data-parallax'));
+            const y = window.scrollY * speed;
+            el.style.transform = `translateY(${y}px)`;
+        });
+    });
+
+    // --- REVEAL AU SCROLL ---
+    const revealElements = document.querySelectorAll('[data-reveal]');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealElements.forEach(el => observer.observe(el));
+
+    // --- TRADUCTIONS --- (version compacte conservée)
     const i18n = {
         fr: {
-            nav_ecosystem:"Écosystème",nav_products:"Produits",nav_filiales:"Filiales",nav_roadmap:"Roadmap",nav_contact:"Contact",
-            hero_badge:"Guinée • 2026",hero_title_main:"La Guinée des",hero_title_accent:"Lumières",
-            hero_motto:"Soyez des fous à la porte de la raison des hommes",hero_scroll:"Découvrir le projet",
-            eco_tag:"Architecture",eco_title:"Un écosystème complet et souverain",eco_lead:"Trois piliers fondateurs pour une indépendance technologique durable. Du laboratoire à l'université, chaque maillon est intégré.",
-            eco_dlc_tag:"Recherche & Développement",eco_dlc_desc:"Le Cerveau. Jumeaux numériques, intelligence artificielle, prototypage rapide. Le bureau des projets de convergence.",
-            eco_tech_tag:"Stratégie & Pilotage",eco_tech_desc:"Le Corps. Holding stratégique, protection des brevets, pilotage à horizon 2030-2050. Fonds de dotation verrouillé.",
-            eco_duts_tag:"Formation & Excellence",eco_duts_desc:"Le Sang. Écoles d'ingénierie système, électronique, chimie énergétique et cryptographie. L'étudiant est co-créateur.",
-            quote_text:"De l'Atome au Logiciel, tout est pensé, conçu et sécurisé ici",quote_source:"— Doctrine DAIGU, Livre Blanc Stratégique",
-            prod_tag:"Portfolio",prod_title:"Nos domaines d'innovation",prod_lead:"Huit verticales technologiques intégrées, toutes alimentées par notre système d'exploitation souverain DAIGU OS.",
-            prod_phone:"Smartphone sous DAIGU OS",prod_console:"Console de jeu nouvelle génération",prod_pc:"PC & stations de travail",prod_os:"Système d'exploitation souverain",prod_cloud:"Cloud national guinéen",prod_ev:"Véhicule électrique africain",prod_cyber:"Cybersécurité Zéro Trust",prod_drone:"Drones & IoT tropicalisés",
-            fil_tag:"Structure opérationnelle",fil_title:"La pile technologique",fil_lead:"Quatre filiales, une chaîne de valeur verticale. Chaque couche alimente celle du dessus.",
-            fil_04_desc:"Matériel & Intégration. Drones, tablettes durcies, équipements réseau. Conception « TROPIC-PROOF ».",fil_04_role:"Sommet visible",
-            fil_03_desc:"Logiciel & IA. DAIGU OS (micro-noyau temps réel), IA agentique, moteur de jumeau numérique.",fil_03_role:"Noyau souverain",
-            fil_02_desc:"Cyber & Infrastructures. Cloud national guinéen, red team interne, architecture zéro trust, résilience offline.",fil_02_role:"Bouclier",
-            fil_01_desc:"Matériaux & Batteries. Stockage stationnaire, valorisation des résidus de bauxite, micro-grids solaires.",fil_01_role:"Base énergétique",
-            road_tag:"Feuille de route",road_title:"2026 – 2035",road_lead:"Un plan décennal structuré en quatre phases, de la fondation juridique à l'expansion régionale.",
-            road_phase0:"Phase 0",road_phase0_title:"Fondations Silencieuses",road_phase0_desc:"Constitution juridique de la holding, ouverture de la première cohorte DUTS, acquisition du terrain DLC.",road_phase0_year:"Année 1",
-            road_phase1:"Phase 1",road_phase1_title:"Noyau Souverain",road_phase1_desc:"Sortie de DAIGU OS Lite V0.1. Lancement du Cloud privé guinéen. Premiers projets de convergence.",road_phase1_year:"Année 2 – 4",
-            road_phase2:"Phase 2",road_phase2_title:"Incarnation Physique",road_phase2_desc:"Assemblage du premier terminal autonome : tablette durcie sous DAIGU OS. Production pilote de batteries.",road_phase2_year:"Année 4 – 7",
-            road_phase3:"Phase 3",road_phase3_title:"Démultiplication",road_phase3_desc:"Expansion régionale du Cloud. DAIGU OS sur TV et véhicules. DUTS ouvre ses portes à la sous-région.",road_phase3_year:"Année 7 – 10",
-            ctc_tag:"Contact",ctc_title:"Partenariat stratégique",ctc_lead:"DAIGU est ouvert à la coopération bilatérale dans le cadre des Ateliers Luban et du FOCAC.",
-            ctc_address_title:"Adresse",ctc_email_title:"Email",ctc_private_title:"Espace Partenaires",ctc_private_link:"🔒 Accès sécurisé",
-            ctc_form_note:"Nous répondons sous 48 heures.",ctc_send:"Envoyer",
-            footer_motto:"Soyez des fous à la porte de la raison des hommes",footer_copy:"La Guinée des Lumières.",
-            footer_nav_title:"Navigation",footer_docs_title:"Documents",footer_doc_wp:"Livre Blanc (PDF)",footer_doc_partner:"Dossier Partenariat (PDF)",footer_private:"Espace Partenaires"
+            nav_ecosystem:"Écosystème",nav_products:"Produits",nav_filiales:"Filiales",nav_video:"Vision",nav_roadmap:"Roadmap",nav_contact:"Contact",
+            hero_badge:"DAIGU TECHNOLOGY • Guinée 2026",hero_line1:"La Guinée des",hero_line2:"Lumières",
+            hero_motto:"Soyez des fous à la porte de la raison des hommes",hero_scroll:"Découvrir",
+            s1_tag:"Recherche & Développement",s1_desc:"Le Cerveau de l'écosystème. Au cœur de Conakry, nos chercheurs développent les jumeaux numériques, l'intelligence artificielle et les prototypes qui alimentent toutes nos filiales. Un laboratoire souverain pour une innovation sans dépendance.",
+            s2_tag:"Stratégie & Pilotage",s2_desc:"Le Corps. La holding qui verrouille le capital, protège les brevets et oriente la stratégie sur 30 ans. Un fonds de dotation garantit que les profits retournent à la formation et à la recherche.",
+            s3_tag:"Formation & Excellence",s3_desc:"Le Sang. Ici, l'étudiant est un co-créateur. Chaque promotion travaille sur des projets réels des filiales, encadrée par les ingénieurs de DLC. Pas de simulacre : du code, des prototypes, de la souveraineté.",
+            video_tag:"Production du Futur",video_title:"L'Usine Intelligente",video_desc:"Des chaînes de montage automatisées aux véhicules électriques conçus pour l'Afrique. DAIGU construit l'industrie de demain, aujourd'hui.",
+            prod_tag:"Portfolio",prod_title:"L'Écosystème Produits",prod_sub:"Huit verticales intégrées, toutes alimentées par DAIGU OS.",
+            prod_phone:"Smartphone souverain",prod_console:"Jeu nouvelle génération",prod_pc:"PC & stations de travail",prod_os:"Système d'exploitation",prod_cloud:"Cloud national",prod_ev:"Véhicule électrique",prod_cyber:"Cybersécurité",prod_drone:"Drones & IoT",
+            quote_text:"De l'Atome au Logiciel, tout est pensé, conçu et sécurisé ici",quote_source:"— Doctrine DAIGU",
+            fil_tag:"La Pile Technologique",fil_title:"Nos Filiales",
+            fil_04:"Matériel & Intégration — Drones, tablettes durcies, équipements réseau « TROPIC-PROOF ».",fil_04_badge:"Sommet",
+            fil_03:"Logiciel & IA — DAIGU OS micro-noyau, IA agentique, moteur de jumeau numérique.",fil_03_badge:"Noyau",
+            fil_02:"Cyber & Infra — Cloud national, Red Team interne, Zéro Trust, résilience offline.",fil_02_badge:"Bouclier",
+            fil_01:"Matériaux & Batteries — Stockage, valorisation bauxite, micro-grids solaires.",fil_01_badge:"Base",
+            road_tag:"Feuille de Route",road_title:"2026 – 2035",
+            tl_phase0:"Phase 0",tl_0_title:"Fondations Silencieuses",tl_0_desc:"Constitution de la holding, ouverture DUTS, acquisition DLC.",
+            tl_phase1:"Phase 1",tl_1_title:"Noyau Souverain",tl_1_desc:"DAIGU OS V0.1, Cloud privé guinéen.",
+            tl_phase2:"Phase 2",tl_2_title:"Incarnation Physique",tl_2_desc:"Premier terminal autonome, production pilote de batteries.",
+            tl_phase3:"Phase 3",tl_3_title:"Démultiplication",tl_3_desc:"Expansion régionale, DAIGU OS multi-support.",
+            partner_tag:"Partenariat",partner_title:"Construisons l'avenir ensemble",partner_desc:"DAIGU est ouvert à la coopération bilatérale dans le cadre des Ateliers Luban et du FOCAC. Nous collaborons avec des partenaires qui partagent notre vision de souveraineté technologique.",
+            partner_private:"🔒 Espace Partenaires",partner_send:"Envoyer",
+            footer_motto:"Soyez des fous à la porte de la raison des hommes",footer_tagline:"La Guinée des Lumières"
         },
         en: {
-            nav_ecosystem:"Ecosystem",nav_products:"Products",nav_filiales:"Subsidiaries",nav_roadmap:"Roadmap",nav_contact:"Contact",
-            hero_badge:"Guinea • 2026",hero_title_main:"The Guinea of",hero_title_accent:"Lights",
-            hero_motto:"Be fools at the gate of men's reason",hero_scroll:"Discover the project",
-            eco_tag:"Architecture",eco_title:"A complete, sovereign ecosystem",eco_lead:"Three founding pillars for lasting technological independence. From laboratory to university, every link is integrated.",
-            eco_dlc_tag:"Research & Development",eco_dlc_desc:"The Brain. Digital twins, artificial intelligence, rapid prototyping. The Convergence Projects Office.",
-            eco_tech_tag:"Strategy & Steering",eco_tech_desc:"The Body. Strategic holding, patent protection, 2030-2050 steering. Locked endowment fund.",
-            eco_duts_tag:"Training & Excellence",eco_duts_desc:"The Blood. Schools of systems engineering, electronics, energy chemistry, and cryptography. The student is a co-creator.",
-            quote_text:"From the Atom to the Software, everything is designed, built, and secured here",quote_source:"— DAIGU Doctrine, Strategic White Paper",
-            prod_tag:"Portfolio",prod_title:"Our innovation domains",prod_lead:"Eight integrated technological verticals, all powered by our sovereign operating system DAIGU OS.",
-            prod_phone:"Smartphone running DAIGU OS",prod_console:"Next-gen gaming console",prod_pc:"PCs & workstations",prod_os:"Sovereign operating system",prod_cloud:"Guinean national cloud",prod_ev:"African electric vehicle",prod_cyber:"Zero Trust cybersecurity",prod_drone:"Tropicalized drones & IoT",
-            fil_tag:"Operational Structure",fil_title:"The technology stack",fil_lead:"Four subsidiaries, one vertical value chain. Each layer feeds the one above.",
-            fil_04_desc:"Hardware & Integration. Drones, rugged tablets, network equipment. \"TROPIC-PROOF\" design.",fil_04_role:"Visible Summit",
-            fil_03_desc:"Software & AI. DAIGU OS (real-time micro-kernel), agentic AI, digital twin engine.",fil_03_role:"Sovereign Kernel",
-            fil_02_desc:"Cyber & Infrastructure. Guinean national cloud, internal red team, zero trust architecture, offline resilience.",fil_02_role:"Shield",
-            fil_01_desc:"Materials & Batteries. Stationary storage, bauxite residue valorization, solar micro-grids.",fil_01_role:"Energy Base",
-            road_tag:"Roadmap",road_title:"2026 – 2035",road_lead:"A ten-year plan structured in four phases, from legal foundation to regional expansion.",
-            road_phase0:"Phase 0",road_phase0_title:"Silent Foundations",road_phase0_desc:"Legal constitution of the holding, opening of the first DUTS cohort, DLC land acquisition.",road_phase0_year:"Year 1",
-            road_phase1:"Phase 1",road_phase1_title:"Sovereign Kernel",road_phase1_desc:"Release of DAIGU OS Lite V0.1. Launch of the Guinean Private Cloud. First convergence projects.",road_phase1_year:"Year 2 – 4",
-            road_phase2:"Phase 2",road_phase2_title:"Physical Incarnation",road_phase2_desc:"Assembly of the first autonomous terminal: rugged tablet running DAIGU OS. Pilot battery production.",road_phase2_year:"Year 4 – 7",
-            road_phase3:"Phase 3",road_phase3_title:"Scaling Up",road_phase3_desc:"Regional Cloud expansion. DAIGU OS on TV and vehicles. DUTS opens to the sub-region.",road_phase3_year:"Year 7 – 10",
-            ctc_tag:"Contact",ctc_title:"Strategic Partnership",ctc_lead:"DAIGU is open to bilateral cooperation within the framework of Luban Workshops and FOCAC.",
-            ctc_address_title:"Address",ctc_email_title:"Email",ctc_private_title:"Partners Area",ctc_private_link:"🔒 Secure Access",
-            ctc_form_note:"We respond within 48 hours.",ctc_send:"Send",
-            footer_motto:"Be fools at the gate of men's reason",footer_copy:"The Guinea of Lights.",
-            footer_nav_title:"Navigation",footer_docs_title:"Documents",footer_doc_wp:"White Paper (PDF)",footer_doc_partner:"Partnership Dossier (PDF)",footer_private:"Partners Area"
+            nav_ecosystem:"Ecosystem",nav_products:"Products",nav_filiales:"Subsidiaries",nav_video:"Vision",nav_roadmap:"Roadmap",nav_contact:"Contact",
+            hero_badge:"DAIGU TECHNOLOGY • Guinea 2026",hero_line1:"The Guinea of",hero_line2:"Lights",
+            hero_motto:"Be fools at the gate of men's reason",hero_scroll:"Discover",
+            s1_tag:"Research & Development",s1_desc:"The Brain of the ecosystem. In the heart of Conakry, our researchers develop digital twins, artificial intelligence, and prototypes that power all our subsidiaries. A sovereign laboratory for innovation without dependency.",
+            s2_tag:"Strategy & Steering",s2_desc:"The Body. The holding company that locks capital, protects patents, and steers strategy over 30 years. An endowment fund ensures profits return to training and research.",
+            s3_tag:"Training & Excellence",s3_desc:"The Blood. Here, the student is a co-creator. Each cohort works on real subsidiary projects, supervised by DLC engineers. No simulation: code, prototypes, sovereignty.",
+            video_tag:"Future Production",video_title:"The Smart Factory",video_desc:"From automated assembly lines to electric vehicles designed for Africa. DAIGU is building tomorrow's industry, today.",
+            prod_tag:"Portfolio",prod_title:"The Product Ecosystem",prod_sub:"Eight integrated verticals, all powered by DAIGU OS.",
+            prod_phone:"Sovereign smartphone",prod_console:"Next-gen gaming",prod_pc:"PCs & workstations",prod_os:"Operating system",prod_cloud:"National cloud",prod_ev:"Electric vehicle",prod_cyber:"Cybersecurity",prod_drone:"Drones & IoT",
+            quote_text:"From the Atom to the Software, everything is designed, built, and secured here",quote_source:"— DAIGU Doctrine",
+            fil_tag:"The Technology Stack",fil_title:"Our Subsidiaries",
+            fil_04:"Hardware & Integration — Drones, rugged tablets, network equipment \"TROPIC-PROOF\".",fil_04_badge:"Summit",
+            fil_03:"Software & AI — DAIGU OS micro-kernel, agentic AI, digital twin engine.",fil_03_badge:"Kernel",
+            fil_02:"Cyber & Infra — National cloud, internal Red Team, Zero Trust, offline resilience.",fil_02_badge:"Shield",
+            fil_01:"Materials & Batteries — Storage, bauxite valorization, solar micro-grids.",fil_01_badge:"Base",
+            road_tag:"Roadmap",road_title:"2026 – 2035",
+            tl_phase0:"Phase 0",tl_0_title:"Silent Foundations",tl_0_desc:"Holding constitution, DUTS opening, DLC acquisition.",
+            tl_phase1:"Phase 1",tl_1_title:"Sovereign Kernel",tl_1_desc:"DAIGU OS V0.1, Guinean private cloud.",
+            tl_phase2:"Phase 2",tl_2_title:"Physical Incarnation",tl_2_desc:"First autonomous terminal, pilot battery production.",
+            tl_phase3:"Phase 3",tl_3_title:"Scaling Up",tl_3_desc:"Regional expansion, multi-device DAIGU OS.",
+            partner_tag:"Partnership",partner_title:"Let's build the future together",partner_desc:"DAIGU is open to bilateral cooperation under the Luban Workshops and FOCAC framework. We collaborate with partners who share our vision of technological sovereignty.",
+            partner_private:"🔒 Partners Area",partner_send:"Send",
+            footer_motto:"Be fools at the gate of men's reason",footer_tagline:"The Guinea of Lights"
         },
         zh: {
-            nav_ecosystem:"生态系统",nav_products:"产品",nav_filiales:"子公司",nav_roadmap:"路线图",nav_contact:"联系",
-            hero_badge:"几内亚 • 2026",hero_title_main:"光明",hero_title_accent:"几内亚",
-            hero_motto:"做人类理性之门前的疯子",hero_scroll:"探索项目",
-            eco_tag:"架构",eco_title:"完整且主权的生态系统",eco_lead:"三个创始支柱，实现持久的技术独立。从实验室到大学，每个环节都紧密相连。",
-            eco_dlc_tag:"研发",eco_dlc_desc:"大脑。数字孪生、人工智能、快速原型制造。融合项目办公室。",
-            eco_tech_tag:"战略与指导",eco_tech_desc:"身体。战略控股、专利保护、2030-2050年规划。锁定捐赠基金。",
-            eco_duts_tag:"培训与卓越",eco_duts_desc:"血液。系统工程、电子、能源化学和密码学学院。学生是共同创造者。",
-            quote_text:"从原子到软件，一切都在这里设计、制造和保护",quote_source:"— DAIGU教义，战略白皮书",
-            prod_tag:"产品组合",prod_title:"我们的创新领域",prod_lead:"八个集成的技术垂直领域，全部由我们的主权操作系统DAIGU OS驱动。",
-            prod_phone:"运行DAIGU OS的智能手机",prod_console:"次世代游戏主机",prod_pc:"电脑与工作站",prod_os:"主权操作系统",prod_cloud:"几内亚国家云",prod_ev:"非洲电动汽车",prod_cyber:"零信任网络安全",prod_drone:"热带化无人机与物联网",
-            fil_tag:"运营结构",fil_title:"技术栈",fil_lead:"四个子公司，一条垂直价值链。每一层都滋养上一层。",
-            fil_04_desc:"硬件与集成。无人机、加固平板、网络设备。\"热带防护\"设计。",fil_04_role:"可见之巅",
-            fil_03_desc:"软件与AI。DAIGU OS（实时微内核）、智能代理AI、数字孪生引擎。",fil_03_role:"主权内核",
-            fil_02_desc:"网络与基础设施。几内亚国家云、内部红队、零信任架构、离线韧性。",fil_02_role:"盾牌",
-            fil_01_desc:"材料与电池。固定存储、铝土矿废渣增值、太阳能微电网。",fil_01_role:"能源基础",
-            road_tag:"路线图",road_title:"2026 – 2035",road_lead:"一个十年计划，分为四个阶段，从法律基础到区域扩张。",
-            road_phase0:"第0阶段",road_phase0_title:"沉默的奠基",road_phase0_desc:"控股公司法律注册，首批DUTS学员开学，DLC土地获取。",road_phase0_year:"第一年",
-            road_phase1:"第1阶段",road_phase1_title:"主权内核",road_phase1_desc:"发布DAIGU OS Lite V0.1。几内亚私有云上线。首批融合项目。",road_phase1_year:"第2-4年",
-            road_phase2:"第2阶段",road_phase2_title:"物理实体",road_phase2_desc:"首台自主终端组装：运行DAIGU OS的加固平板。电池中试生产。",road_phase2_year:"第4-7年",
-            road_phase3:"第3阶段",road_phase3_title:"扩展",road_phase3_desc:"云服务区域扩展。DAIGU OS应用于电视和车辆。DUTS向次区域开放。",road_phase3_year:"第7-10年",
-            ctc_tag:"联系",ctc_title:"战略合作",ctc_lead:"DAIGU对在鲁班工坊和中非合作论坛框架下的双边合作持开放态度。",
-            ctc_address_title:"地址",ctc_email_title:"邮箱",ctc_private_title:"合作伙伴专区",ctc_private_link:"🔒 安全访问",
-            ctc_form_note:"我们在48小时内回复。",ctc_send:"发送",
-            footer_motto:"做人类理性之门前的疯子",footer_copy:"光明几内亚。",
-            footer_nav_title:"导航",footer_docs_title:"文档",footer_doc_wp:"白皮书 (PDF)",footer_doc_partner:"合作档案 (PDF)",footer_private:"合作伙伴专区"
+            nav_ecosystem:"生态系统",nav_products:"产品",nav_filiales:"子公司",nav_video:"愿景",nav_roadmap:"路线图",nav_contact:"联系",
+            hero_badge:"DAIGU TECHNOLOGY • 几内亚 2026",hero_line1:"光明",hero_line2:"几内亚",
+            hero_motto:"做人类理性之门前的疯子",hero_scroll:"探索",
+            s1_tag:"研发",s1_desc:"生态系统的大脑。在科纳克里市中心，我们的研究人员开发数字孪生、人工智能和原型，为所有子公司提供动力。一个主权实验室，实现无依赖的创新。",
+            s2_tag:"战略与指导",s2_desc:"身体。锁定资本、保护专利、规划30年战略的控股公司。捐赠基金确保利润回流至培训和研究。",
+            s3_tag:"培训与卓越",s3_desc:"血液。在这里，学生是共同创造者。每届学生都在DLC工程师的指导下参与真实的子公司项目。没有模拟：代码、原型、主权。",
+            video_tag:"未来生产",video_title:"智能工厂",video_desc:"从自动化装配线到为非洲设计的电动汽车。DAIGU正在建设未来的工业，就在今天。",
+            prod_tag:"产品组合",prod_title:"产品生态系统",prod_sub:"八个集成垂直领域，全部由DAIGU OS驱动。",
+            prod_phone:"主权智能手机",prod_console:"次世代游戏",prod_pc:"电脑与工作站",prod_os:"操作系统",prod_cloud:"国家云",prod_ev:"电动汽车",prod_cyber:"网络安全",prod_drone:"无人机与物联网",
+            quote_text:"从原子到软件，一切都在这里设计、制造和保护",quote_source:"— DAIGU教义",
+            fil_tag:"技术栈",fil_title:"我们的子公司",
+            fil_04:"硬件与集成 — 无人机、加固平板、网络设备\"热带防护\"。",fil_04_badge:"顶峰",
+            fil_03:"软件与AI — DAIGU OS微内核、智能代理AI、数字孪生引擎。",fil_03_badge:"内核",
+            fil_02:"网络与基础设施 — 国家云、内部红队、零信任、离线韧性。",fil_02_badge:"盾牌",
+            fil_01:"材料与电池 — 存储、铝土矿增值、太阳能微电网。",fil_01_badge:"基础",
+            road_tag:"路线图",road_title:"2026 – 2035",
+            tl_phase0:"第0阶段",tl_0_title:"奠基",tl_0_desc:"控股公司成立，DUTS开学，DLC用地获取。",
+            tl_phase1:"第1阶段",tl_1_title:"主权内核",tl_1_desc:"DAIGU OS V0.1，几内亚私有云。",
+            tl_phase2:"第2阶段",tl_2_title:"物理实体",tl_2_desc:"首台自主终端，电池中试生产。",
+            tl_phase3:"第3阶段",tl_3_title:"扩展",tl_3_desc:"区域扩张，多设备DAIGU OS。",
+            partner_tag:"合作",partner_title:"共创未来",partner_desc:"DAIGU对在鲁班工坊和中非合作论坛框架下的双边合作持开放态度。我们与认同我们技术主权愿景的伙伴合作。",
+            partner_private:"🔒 合作伙伴专区",partner_send:"发送",
+            footer_motto:"做人类理性之门前的疯子",footer_tagline:"光明几内亚"
         }
     };
 
@@ -120,11 +141,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const saved = localStorage.getItem('daigu-lang');
     const browser = navigator.language.slice(0,2);
     applyLang(saved && i18n[saved] ? saved : i18n[browser] ? browser : 'fr');
-
-    // --- REVEAL ---
-    document.querySelectorAll('.card, .stack-item, .timeline-card').forEach(el => el.classList.add('reveal'));
-    const obs = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
     // --- FORM ---
     const form = document.getElementById('contactForm');
