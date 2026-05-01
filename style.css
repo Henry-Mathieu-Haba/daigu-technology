@@ -31,10 +31,37 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 .nav-links { display: flex; align-items: center; gap: 2rem; }
 .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: var(--transition); }
 .nav-links a:hover { color: var(--white); }
-.nav-lang { display: flex; gap: 0.3rem; margin-left: 1rem; }
-.lang-btn { background: none; border: 1px solid transparent; color: rgba(255,255,255,0.5); font-size: 0.7rem; font-weight: 600; letter-spacing: 1px; padding: 0.3rem 0.6rem; cursor: pointer; border-radius: 4px; transition: var(--transition); font-family: var(--font); }
-.lang-btn.active { color: var(--gold); border-color: rgba(200,169,110,0.4); background: rgba(200,169,110,0.1); }
-.lang-btn:hover { color: var(--white); }
+/* --- LANG SELECTOR --- */
+.nav-lang { position: relative; margin-left: 1rem; }
+.lang-current {
+    display: flex; align-items: center; gap: 0.5rem;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15);
+    color: var(--white); font-size: 0.75rem; font-weight: 600;
+    padding: 0.4rem 0.8rem; cursor: pointer; border-radius: 50px;
+    font-family: var(--font); transition: var(--transition);
+}
+.lang-current:hover { border-color: var(--gold); }
+.lang-arrow { transition: transform 0.3s; }
+.lang-current.open .lang-arrow { transform: rotate(180deg); }
+.lang-dropdown {
+    position: absolute; top: 120%; right: 0;
+    background: rgba(20,20,20,0.95); backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.08); border-radius: 12px;
+    padding: 0.5rem; min-width: 180px; z-index: 200;
+    display: none; flex-direction: column; gap: 0.15rem;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+.lang-dropdown.open { display: flex; }
+.lang-option {
+    display: flex; align-items: center; gap: 0.6rem;
+    width: 100%; padding: 0.6rem 0.8rem; background: none;
+    border: none; border-radius: 8px; color: rgba(255,255,255,0.7);
+    font-size: 0.8rem; cursor: pointer; font-family: var(--font);
+    transition: var(--transition);
+}
+.lang-option:hover { background: rgba(255,255,255,0.05); color: var(--white); }
+.lang-option.active { background: rgba(200,169,110,0.15); color: var(--gold); }
+.lang-option span { font-size: 1rem; }
 .burger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; z-index: 110; }
 .burger span { width: 22px; height: 2px; background: var(--white); transition: var(--transition); }
 .burger.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }

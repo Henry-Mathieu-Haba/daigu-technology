@@ -3,6 +3,36 @@
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
+// --- LANG DROPDOWN ---
+const langToggle = document.getElementById('langToggle');
+const langDropdown = document.getElementById('langDropdown');
+const langFlag = document.getElementById('langFlag');
+const langCode = document.getElementById('langCode');
+
+const langInfo = {
+    fr: { flag: '🇫🇷', code: 'FR', name: 'Français' },
+    en: { flag: '🇬🇧', code: 'EN', name: 'English' },
+    zh: { flag: '🇨🇳', code: '中文', name: '中文' },
+    de: { flag: '🇩🇪', code: 'DE', name: 'Deutsch' },
+    ru: { flag: '🇷🇺', code: 'RU', name: 'Русский' },
+    ar: { flag: '🇸🇦', code: 'AR', name: 'العربية' },
+    es: { flag: '🇪🇸', code: 'ES', name: 'Español' }
+};
+
+langToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    langDropdown.classList.toggle('open');
+    langToggle.classList.toggle('open');
+});
+
+document.addEventListener('click', () => {
+    langDropdown.classList.remove('open');
+    langToggle.classList.remove('open');
+});
+
+langDropdown.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
 
     // --- BURGER ---
     const burger = document.getElementById('burger');
@@ -136,6 +166,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
         localStorage.setItem('daigu-lang', lang);
+        if (langInfo[lang]) {
+    langFlag.textContent = langInfo[lang].flag;
+    langCode.textContent = langInfo[lang].code;
+}
+document.querySelectorAll('.lang-option').forEach(opt => {
+    opt.classList.toggle('active', opt.dataset.lang === lang);
+});
     }
     document.querySelectorAll('.lang-btn').forEach(b => b.addEventListener('click', () => { if (i18n[b.dataset.lang]) applyLang(b.dataset.lang); }));
     const saved = localStorage.getItem('daigu-lang');
