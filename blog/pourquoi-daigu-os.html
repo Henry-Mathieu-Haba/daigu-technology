@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pourquoi DAIGU construit son propre OS — Retour sur la décision fondatrice de DAIGU CORE SYSTEMS.">
+    <meta property="og:title" content="Pourquoi nous construisons notre propre OS — DAIGU Notes">
+    <meta property="og:description" content="La souveraineté numérique ne se négocie pas. Elle se compile.">
+    <title>Pourquoi nous construisons notre propre OS — DAIGU Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #fafafa; color: #1a1a1a; margin: 0; line-height: 1.8; -webkit-font-smoothing: antialiased; }
+        .article-nav { background: rgba(255,255,255,0.9); backdrop-filter: blur(20px); border-bottom: 1px solid #e0e0e0; position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .article-nav a { color: #666; text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+        .article-nav a:hover { color: #c8a96e; }
+        .article-container { max-width: 680px; margin: 0 auto; padding: 7rem 2rem 4rem; }
+        .article-date { font-size: 0.8rem; font-weight: 600; color: #c8a96e; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; }
+        .article-container h1 { font-size: 2.2rem; font-weight: 800; line-height: 1.3; margin-bottom: 1.5rem; letter-spacing: -0.5px; }
+        .article-container h2 { font-size: 1.4rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 0.8rem; }
+        .article-container p { font-size: 1.05rem; color: #333; margin-bottom: 1.5rem; }
+        .article-container blockquote { border-left: 3px solid #c8a96e; margin: 2rem 0; padding: 0.5rem 0 0.5rem 1.5rem; color: #555; font-style: italic; }
+        .article-footer { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid #e0e0e0; text-align: center; color: #999; font-size: 0.85rem; }
+        .article-footer a { color: #c8a96e; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <nav class="article-nav">
+        <a href="../blog.html">← DAIGU Notes</a>
+        <a href="../index.html">DAIGU TECHNOLOGY</a>
+    </nav>
+
+    <div class="article-container">
+        <div class="article-date">1 Mai 2026</div>
+        <h1>Pourquoi nous construisons notre propre système d'exploitation</h1>
+
+        <p>La souveraineté numérique ne se négocie pas. Elle se compile.</p>
+
+        <p>Quand nous avons posé les fondations de DAIGU CORE SYSTEMS, une question revenait sans cesse : <em>« Pourquoi ne pas simplement utiliser Linux ? Ou Android ? C'est open source, gratuit, et ça fonctionne. »</em></p>
+
+        <p>La réponse tient en un nom : Huawei.</p>
+
+        <h2>La leçon de 2019</h2>
+
+        <p>En mai 2019, l'administration américaine a placé Huawei sur l'Entity List. Du jour au lendemain, le géant chinois a perdu l'accès aux Google Mobile Services — le Play Store, Gmail, Maps, YouTube. Pourtant, Android est un logiciel open source. Mais un téléphone sans GMS est inutilisable à l'international.</p>
+
+        <blockquote>
+            « Ce n'était pas un bug. C'était une fonctionnalité de la domination américaine. »
+        </blockquote>
+
+        <p>La leçon est simple : <strong>un système d'exploitation n'est souverain que si toute sa chaîne de services l'est aussi.</strong> Le noyau, les bibliothèques, le build system, les dépôts de paquets, les services cloud associés. Si un seul maillon de cette chaîne est contrôlé par une puissance étrangère, vous n'êtes pas souverain. Vous êtes un locataire.</p>
+
+        <h2>Linux n'est pas la solution</h2>
+
+        <p>Linux est un noyau remarquable. Mais un système d'exploitation complet repose sur des distributions (Debian, Ubuntu, Red Hat) maintenues par des communautés ou des entreprises basées en Amérique du Nord et en Europe. Les dépôts de paquets, les serveurs de build, les chaînes de confiance — tout cela est hébergé ailleurs.</p>
+
+        <p>En cas de crise géopolitique, rien ne garantit que ces services resteront accessibles depuis Conakry.</p>
+
+        <h2>DAIGU OS : un micro-noyau, une chaîne souveraine</h2>
+
+        <p>Nous construisons DAIGU OS sur un micro-noyau temps réel. Chaque ligne de code est compilée sur notre propre infrastructure, hébergée dans notre cloud national. Nos dépôts de code sont synchronisés sur des serveurs en Guinée.</p>
+
+        <p>Le design du noyau répond à une contrainte simple : <strong>128 Mo de RAM suffisent pour le faire tourner.</strong> Cela permet d'équiper des terminaux low-cost pour l'éducation, les infrastructures rurales, et les capteurs industriels.</p>
+
+        <p>Le scheduler garantit un temps d'interruption maximal de 10 microsecondes. C'est une condition indispensable pour les drones, les robots, et les équipements miniers que DAIGU ELECTRONICS développera.</p>
+
+        <h2>La souveraineté est un processus</h2>
+
+        <p>Nous ne prétendons pas rivaliser avec la richesse applicative d'Android ou la maturité de Linux en un an. Mais dans cinq ans, quand un étudiant guinéen de DUTS poussera son premier commit sur DAIGU OS, il saura qu'aucun décret signé à Washington ou à Bruxelles ne pourra bloquer la mise à jour qu'il vient d'écrire.</p>
+
+        <p>C'est cela, la souveraineté.</p>
+
+        <footer class="article-footer">
+            <p>Par le Cerveau — <a href="../index.html">DAIGU TECHNOLOGY</a></p>
+            <p><a href="../blog.html">← Retour aux Notes</a></p>
+        </footer>
+    </div>
+
+</body>
+</html>
