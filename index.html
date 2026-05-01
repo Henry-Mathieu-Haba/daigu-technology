@@ -94,20 +94,23 @@
     </section>
 
     <!-- ========== SECTION 2 — VIDÉO IMMERSIVE ========== -->
-    <section class="video-panel" id="video">
-        <div class="video-overlay"></div>
-        <video autoplay muted loop playsinline class="video-bg">
-            <source src="daigu_factory.mp4" type="video/mp4">
-            <!-- Fallback image si la vidéo ne charge pas -->
-            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1920&q=80" alt="DAIGU Production">
-        </video>
-        <div class="video-content" data-reveal>
-            <span class="story-tag" data-i18n="video_tag">Production du Futur</span>
-            <h2 data-i18n="video_title">L'Usine Intelligente</h2>
-            <p data-i18n="video_desc">Des chaînes de montage automatisées aux véhicules électriques conçus pour l'Afrique. DAIGU construit l'industrie de demain, aujourd'hui.</p>
-        </div>
-    </section>
-
+   <section class="video-panel" id="video">
+    <div class="video-overlay"></div>
+    <div class="video-wrapper">
+        <iframe 
+            src="https://www.youtube.com/embed/2czY1iSndC0?autoplay=1&mute=1&loop=1&playlist=2czY1iSndC0&controls=0&playsinline=1&showinfo=0&rel=0"
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen
+            class="video-bg">
+        </iframe>
+    </div>
+    <div class="video-content" data-reveal>
+        <span class="story-tag" data-i18n="video_tag">Production du Futur</span>
+        <h2 data-i18n="video_title">L'Usine Intelligente</h2>
+        <p data-i18n="video_desc">Des chaînes de montage automatisées aux véhicules électriques conçus pour l'Afrique. DAIGU construit l'industrie de demain, aujourd'hui.</p>
+    </div>
+</section>
     <!-- ========== SECTION 3 — PRODUITS (grille immersive) ========== -->
     <section class="products-panel" id="produkte">
         <div class="container">
