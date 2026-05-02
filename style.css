@@ -171,6 +171,20 @@ body { font-family: var(--font); background: var(--black); color: var(--white); 
 .footer-logo span { color: var(--gold); }
 .footer-motto { font-style: italic; color: rgba(255,255,255,0.3); margin-bottom: 0.3rem; }
 .footer-author { color: var(--gold); font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 3rem; }
+.footer-top { margin-bottom: 2rem; }
+.footer-legal {
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: rgba(255,255,255,0.25);
+    font-size: 0.7rem;
+    line-height: 1.8;
+}
+.footer-legal p { margin-bottom: 0.2rem; }
+.footer-legal strong { color: rgba(255,255,255,0.35); }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; font-size: 0.7rem; color: rgba(255,255,255,0.2); letter-spacing: 2px; text-transform: uppercase; }
 
 /* --- REVEAL --- */
