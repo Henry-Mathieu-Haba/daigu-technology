@@ -1,6 +1,5 @@
 // ============================================
 // DAIGU TECHNOLOGY — Scripts Complets
-// 7 langues — Footer colonnes — Formspree
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -70,24 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     revealElements.forEach(el => observer.observe(el));
 
-    // --- TRADUCTIONS (7 LANGUES) ---
+    // --- TRADUCTIONS ---
     const i18n = {
         fr: {
             nav_ecosystem:"Écosystème",nav_products:"Produits",nav_filiales:"Filiales",nav_video:"Vision",nav_roadmap:"Roadmap",nav_contact:"Contact",nav_blog:"Blog",
             hero_badge:"DAIGU TECHNOLOGY • Guinée 2026",hero_line1:"La Guinée des",hero_line2:"Lumières",
             hero_motto:"Soyez des fous à la porte de la raison des hommes",hero_scroll:"Découvrir",
-            s1_tag:"Recherche & Développement",s1_desc:"Le cœur de l'innovation souveraine
-Le DAIGU LABORATORY CENTER n'est pas un laboratoire au sens classique du terme. Ce n'est pas un bâtiment rempli d'éprouvettes et de blouses blanches. C'est le centre névralgique de tout l'écosystème DAIGU. Le point-origine. L'endroit où les idées deviennent des prototypes, puis des brevets, puis des produits.
-
-DLC a une double mission : la recherche fondamentale et l'application industrielle. D'un côté, nos chercheurs explorent les frontières de la science — nouveaux matériaux issus de la valorisation des résidus de bauxite, architectures de micro-noyaux temps réel, algorithmes d'intelligence artificielle agentique. De l'autre, ils transforment ces découvertes en solutions concrètes que les filiales peuvent industrialiser.
-
-DLC abrite le Bureau des Projets de Convergence. C'est l'organe le plus stratégique du Groupe. Chaque trimestre, il impose aux quatre filiales un projet commun. Par exemple : construire un drone de surveillance minière qui utilise une batterie conçue par DAIGU ENERGY LABS, un firmware écrit par DAIGU CORE SYSTEMS, un châssis assemblé par DAIGU ELECTRONICS, et une liaison sécurisée par DAIGU CLOUD & SHIELD. Sans ce bureau, chaque filiale travaillerait en silo. Avec lui, l'intégration est forcée, testée, validée.
-
-Le laboratoire est équipé d'un FabLab avancé : imprimantes 3D pour métaux et polymères, fraiseuses CNC 5 axes, stations de soudure CMS, enceintes climatiques pour tests tropicaux. Nous ne sous-traitons pas le prototypage. Nous le faisons ici, à Conakry. C'est la condition pour garder la maîtrise de notre propriété intellectuelle.
-
-Enfin, DLC est le sanctuaire du Jumeau Numérique. Chaque produit DAIGU existe d'abord sous forme de modèle virtuel, simulé dans des conditions extrêmes avant même que la première pièce physique ne soit fabriquée. Cela réduit les coûts, accélère les itérations et garantit que nos produits sont conçus pour durer sous les tropiques.
-
-DLC, c'est le Cerveau. Sans lui, le Corps ne sait pas où aller.",
+            s1_tag:"Recherche & Développement",s1_desc:"Le Cerveau de l'écosystème. Au cœur de Conakry, nos chercheurs développent les jumeaux numériques, l'intelligence artificielle et les prototypes qui alimentent toutes nos filiales. Un laboratoire souverain pour une innovation sans dépendance.",
             s2_tag:"Stratégie & Pilotage",s2_desc:"Le Corps. La holding qui verrouille le capital, protège les brevets et oriente la stratégie sur 30 ans. Un fonds de dotation garantit que les profits retournent à la formation et à la recherche.",
             s3_tag:"Formation & Excellence",s3_desc:"Le Sang. Ici, l'étudiant est un co-créateur. Chaque promotion travaille sur des projets réels des filiales, encadrée par les ingénieurs de DLC. Pas de simulacre : du code, des prototypes, de la souveraineté.",
             video_tag:"Production du Futur",video_title:"L'Usine Intelligente",video_desc:"Des chaînes de montage automatisées aux véhicules électriques conçus pour l'Afrique. DAIGU construit l'industrie de demain, aujourd'hui.",
@@ -106,9 +94,7 @@ DLC, c'est le Cerveau. Sans lui, le Corps ne sait pas où aller.",
             tl_phase3:"Phase 3",tl_3_title:"Démultiplication",tl_3_desc:"Expansion régionale, DAIGU OS multi-support.",
             partner_tag:"Partenariat",partner_title:"Construisons l'avenir ensemble",partner_desc:"DAIGU est ouvert à la coopération bilatérale dans le cadre des Ateliers Luban et du FOCAC. Nous collaborons avec des partenaires qui partagent notre vision de souveraineté technologique.",
             partner_private:"🔒 Espace Partenaires",partner_send:"Envoyer",
-            footer_motto:"Soyez des fous à la porte de la raison des hommes",footer_tagline:"La Guinée des Lumières",
-            footer_nav_title:"Navigation",footer_docs_title:"Ressources",footer_legal_title:"Mentions légales",
-            footer_doc_wp:"Livre Blanc (PDF)",footer_doc_partner:"Dossier Partenariat",footer_private:"Espace Partenaires"
+            footer_motto:"Soyez des fous à la porte de la raison des hommes",footer_tagline:"La Guinée des Lumières"
         },
         en: {
             nav_ecosystem:"Ecosystem",nav_products:"Products",nav_filiales:"Subsidiaries",nav_video:"Vision",nav_roadmap:"Roadmap",nav_contact:"Contact",nav_blog:"Blog",
@@ -133,9 +119,7 @@ DLC, c'est le Cerveau. Sans lui, le Corps ne sait pas où aller.",
             tl_phase3:"Phase 3",tl_3_title:"Scaling Up",tl_3_desc:"Regional expansion, multi-device DAIGU OS.",
             partner_tag:"Partnership",partner_title:"Let's build the future together",partner_desc:"DAIGU is open to bilateral cooperation under the Luban Workshops and FOCAC framework. We collaborate with partners who share our vision of technological sovereignty.",
             partner_private:"🔒 Partners Area",partner_send:"Send",
-            footer_motto:"Be fools at the gate of men's reason",footer_tagline:"The Guinea of Lights",
-            footer_nav_title:"Navigation",footer_docs_title:"Resources",footer_legal_title:"Legal Notice",
-            footer_doc_wp:"White Paper (PDF)",footer_doc_partner:"Partnership Dossier",footer_private:"Partners Area"
+            footer_motto:"Be fools at the gate of men's reason",footer_tagline:"The Guinea of Lights"
         },
         zh: {
             nav_ecosystem:"生态系统",nav_products:"产品",nav_filiales:"子公司",nav_video:"愿景",nav_roadmap:"路线图",nav_contact:"联系",nav_blog:"博客",
@@ -160,9 +144,7 @@ DLC, c'est le Cerveau. Sans lui, le Corps ne sait pas où aller.",
             tl_phase3:"第3阶段",tl_3_title:"扩展",tl_3_desc:"区域扩张，多设备DAIGU OS。",
             partner_tag:"合作",partner_title:"共创未来",partner_desc:"DAIGU对在鲁班工坊和中非合作论坛框架下的双边合作持开放态度。",
             partner_private:"🔒 合作伙伴专区",partner_send:"发送",
-            footer_motto:"做人类理性之门前的疯子",footer_tagline:"光明几内亚",
-            footer_nav_title:"导航",footer_docs_title:"资源",footer_legal_title:"法律声明",
-            footer_doc_wp:"白皮书 (PDF)",footer_doc_partner:"合作档案",footer_private:"合作伙伴专区"
+            footer_motto:"做人类理性之门前的疯子",footer_tagline:"光明几内亚"
         },
         de: {
             nav_ecosystem:"Ökosystem",nav_products:"Produkte",nav_filiales:"Tochtergesellschaften",nav_video:"Vision",nav_roadmap:"Roadmap",nav_contact:"Kontakt",nav_blog:"Blog",
@@ -187,9 +169,7 @@ DLC, c'est le Cerveau. Sans lui, le Corps ne sait pas où aller.",
             tl_phase3:"Phase 3",tl_3_title:"Skalierung",tl_3_desc:"Regionale Expansion, Multi-Geräte DAIGU OS.",
             partner_tag:"Partnerschaft",partner_title:"Gemeinsam die Zukunft bauen",partner_desc:"DAIGU ist offen für bilaterale Zusammenarbeit im Rahmen der Luban-Werkstätten und des FOCAC.",
             partner_private:"🔒 Partnerbereich",partner_send:"Senden",
-            footer_motto:"Seid Narren am Tor der Vernunft der Menschen",footer_tagline:"Das Guinea der Lichter",
-            footer_nav_title:"Navigation",footer_docs_title:"Ressourcen",footer_legal_title:"Impressum",
-            footer_doc_wp:"Whitepaper (PDF)",footer_doc_partner:"Partnerschaftsdossier",footer_private:"Partnerbereich"
+            footer_motto:"Seid Narren am Tor der Vernunft der Menschen",footer_tagline:"Das Guinea der Lichter"
         },
         ru: {
             nav_ecosystem:"Экосистема",nav_products:"Продукты",nav_filiales:"Компании",nav_video:"Видение",nav_roadmap:"План",nav_contact:"Контакт",nav_blog:"Блог",
@@ -214,9 +194,7 @@ DLC, c'est le Cerveau. Sans lui, le Corps ne sait pas où aller.",
             tl_phase3:"Фаза 3",tl_3_title:"Масштабирование",tl_3_desc:"Региональная экспансия, DAIGU OS на разных устройствах.",
             partner_tag:"Партнёрство",partner_title:"Построим будущее вместе",partner_desc:"DAIGU открыт для двустороннего сотрудничества в рамках Мастерских Лубань и FOCAC.",
             partner_private:"🔒 Партнёрская зона",partner_send:"Отправить",
-            footer_motto:"Будьте безумцами у ворот разума людей",footer_tagline:"Гвинея Света",
-            footer_nav_title:"Навигация",footer_docs_title:"Ресурсы",footer_legal_title:"Правовая информация",
-            footer_doc_wp:"Белая книга (PDF)",footer_doc_partner:"Партнёрское досье",footer_private:"Партнёрская зона"
+            footer_motto:"Будьте безумцами у ворот разума людей",footer_tagline:"Гвинея Света"
         },
         ar: {
             nav_ecosystem:"النظام البيئي",nav_products:"المنتجات",nav_filiales:"الشركات",nav_video:"الرؤية",nav_roadmap:"الخريطة",nav_contact:"اتصال",nav_blog:"مدونة",
@@ -241,9 +219,7 @@ DLC, c'est le Cerveau. Sans lui, le Corps ne sait pas où aller.",
             tl_phase3:"المرحلة 3",tl_3_title:"التوسع",tl_3_desc:"توسع إقليمي، DAIGU OS على أجهزة متعددة.",
             partner_tag:"شراكة",partner_title:"لنبني المستقبل معاً",partner_desc:"DAIGU منفتحة على التعاون الثنائي في إطار ورش عمل لوبان وFOCAC.",
             partner_private:"🔒 منطقة الشركاء",partner_send:"إرسال",
-            footer_motto:"كونوا مجانين على باب عقل البشر",footer_tagline:"غينيا الأنوار",
-            footer_nav_title:"التنقل",footer_docs_title:"الموارد",footer_legal_title:"إشعار قانوني",
-            footer_doc_wp:"الكتاب الأبيض (PDF)",footer_doc_partner:"ملف الشراكة",footer_private:"منطقة الشركاء"
+            footer_motto:"كونوا مجانين على باب عقل البشر",footer_tagline:"غينيا الأنوار"
         },
         es: {
             nav_ecosystem:"Ecosistema",nav_products:"Productos",nav_filiales:"Filiales",nav_video:"Visión",nav_roadmap:"Hoja de ruta",nav_contact:"Contacto",nav_blog:"Blog",
@@ -268,9 +244,7 @@ DLC, c'est le Cerveau. Sans lui, le Corps ne sait pas où aller.",
             tl_phase3:"Fase 3",tl_3_title:"Expansión",tl_3_desc:"Expansión regional, DAIGU OS multi-dispositivo.",
             partner_tag:"Asociación",partner_title:"Construyamos el futuro juntos",partner_desc:"DAIGU está abierto a la cooperación bilateral en el marco de los Talleres Luban y el FOCAC.",
             partner_private:"🔒 Área de Socios",partner_send:"Enviar",
-            footer_motto:"Sed locos a la puerta de la razón de los hombres",footer_tagline:"La Guinea de las Luces",
-            footer_nav_title:"Navegación",footer_docs_title:"Recursos",footer_legal_title:"Aviso legal",
-            footer_doc_wp:"Libro Blanco (PDF)",footer_doc_partner:"Dosier de Asociación",footer_private:"Área de Socios"
+            footer_motto:"Sed locos a la puerta de la razón de los hombres",footer_tagline:"La Guinea de las Luces"
         }
     };
 
@@ -310,7 +284,7 @@ DLC, c'est le Cerveau. Sans lui, le Corps ne sait pas où aller.",
         const orig = btn.textContent;
         btn.textContent = '⏳ Envoi...'; btn.disabled = true;
         try {
-            const res = await fetch('https://formspree.io/f/mrejbl...', { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+            const res = await fetch('https://formspree.io/f/VOTRE_ID_FORMSPREE', { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
             btn.textContent = res.ok ? '✅ Envoyé' : '❌ Erreur';
             if (res.ok) form.reset();
         } catch { btn.textContent = '❌ Erreur'; }
