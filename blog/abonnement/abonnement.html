@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abonnement DAIGU Research Hub — Accédez à la recherche premium.">
+    <title>Abonnement — DAIGU Research Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #fdfdfd; color: #1a1a1a; line-height: 1.7; }
+        .abo-nav { background: #fff; border-bottom: 1px solid #e0e0e0; position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .abo-nav a { color: #666; text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+        .abo-nav a:hover { color: #c8a96e; }
+        .abo-nav .logo { font-size: 1.3rem; font-weight: 800; color: #1a1a1a; }
+        .abo-nav .logo span { color: #c8a96e; }
+        .abo-container { max-width: 1000px; margin: 0 auto; padding: 6rem 2rem 3rem; }
+        .abo-header { text-align: center; margin-bottom: 4rem; }
+        .abo-header h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; }
+        .abo-header p { color: #666; font-size: 1.1rem; }
+        .abo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 4rem; }
+        .abo-card { border: 2px solid #e0e0e0; border-radius: 12px; padding: 2.5rem 2rem; text-align: center; transition: all 0.3s; background: #fff; }
+        .abo-card:hover { border-color: #c8a96e; box-shadow: 0 12px 30px rgba(0,0,0,0.08); transform: translateY(-4px); }
+        .abo-card.recommended { border-color: #c8a96e; background: #fdfaf3; }
+        .abo-card.recommended::before { content: 'Recommandé'; display: block; background: #c8a96e; color: #fff; font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 0.3rem; border-radius: 50px; margin-bottom: 1.5rem; }
+        .abo-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; }
+        .abo-price { font-size: 2.5rem; font-weight: 800; color: #c8a96e; margin-bottom: 0.5rem; }
+        .abo-period { font-size: 0.85rem; color: #888; margin-bottom: 2rem; }
+        .abo-features { list-style: none; margin-bottom: 2rem; text-align: left; }
+        .abo-features li { padding: 0.5rem 0; font-size: 0.9rem; color: #555; border-bottom: 1px solid #f0f0f0; }
+        .abo-features li::before { content: '✓ '; color: #2e7d32; font-weight: 700; }
+        .abo-btn { display: inline-block; width: 100%; padding: 1rem; border-radius: 50px; font-weight: 700; font-size: 0.95rem; text-decoration: none; transition: all 0.3s; }
+        .abo-btn-primary { background: #c8a96e; color: #fff; }
+        .abo-btn-primary:hover { background: #b8953d; }
+        .abo-btn-outline { background: #fff; color: #c8a96e; border: 2px solid #c8a96e; }
+        .abo-btn-outline:hover { background: #fdfaf3; }
+        .abo-footer { text-align: center; padding: 2rem; border-top: 1px solid #e0e0e0; color: #999; font-size: 0.85rem; margin-top: 3rem; }
+        .abo-footer a { color: #c8a96e; text-decoration: none; }
+        @media (max-width: 768px) { .abo-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav class="abo-nav">
+        <a href="blog.html" class="logo">DAIGU<span> Research Hub</span></a>
+        <a href="blog.html">← Retour</a>
+    </nav>
+
+    <div class="abo-container">
+        <header class="abo-header">
+            <h1>Choisissez votre abonnement</h1>
+            <p>Accédez à la recherche qui construit la souveraineté. Annulez à tout moment.</p>
+        </header>
+
+        <div class="abo-grid">
+            <!-- GRATUIT -->
+            <div class="abo-card">
+                <h3>Gratuit</h3>
+                <div class="abo-price">0€</div>
+                <div class="abo-period">pour toujours</div>
+                <ul class="abo-features">
+                    <li>Articles de vulgarisation</li>
+                    <li>Recherche fondamentale</li>
+                    <li>3 articles gratuits</li>
+                    <li>Newsletter mensuelle</li>
+                </ul>
+                <a href="blog.html" class="abo-btn abo-btn-outline">Commencer</a>
+            </div>
+
+            <!-- PREMIUM MENSUEL -->
+            <div class="abo-card recommended">
+                <h3>Premium</h3>
+                <div class="abo-price">9,90€</div>
+                <div class="abo-period">par mois</div>
+                <ul class="abo-features">
+                    <li>Tous les articles premium</li>
+                    <li>Livres blancs techniques</li>
+                    <li>Accès anticipé aux brevets</li>
+                    <li>Webinaires mensuels</li>
+                    <li>Archives complètes</li>
+                </ul>
+                <a href="#" class="abo-btn abo-btn-primary">S'abonner</a>
+            </div>
+
+            <!-- PREMIUM ANNUEL -->
+            <div class="abo-card">
+                <h3>Annuel</h3>
+                <div class="abo-price">99€</div>
+                <div class="abo-period">par an · 2 mois offerts</div>
+                <ul class="abo-features">
+                    <li>Tout le contenu Premium</li>
+                    <li>Livres blancs techniques</li>
+                    <li>Accès anticipé aux brevets</li>
+                    <li>Webinaires mensuels</li>
+                    <li>Archives complètes</li>
+                    <li>Rapports exclusifs</li>
+                </ul>
+                <a href="#" class="abo-btn abo-btn-primary">S'abonner</a>
+            </div>
+        </div>
+
+        <div style="text-align:center;background:#f8f8f8;padding:2rem;border-radius:8px;">
+            <h3 style="margin-bottom:0.5rem;">🎓 Étudiant DUTS ?</h3>
+            <p style="color:#666;">L'abonnement Premium est <strong>gratuit</strong> pour tous les étudiants de DAIGU UNIVERSITY.</p>
+            <a href="mailto:architecture@daigu-technology.com" style="color:#c8a96e;">Demander l'accès →</a>
+        </div>
+    </div>
+
+    <footer class="abo-footer">
+        <p>DAIGU Research Hub — <a href="index.html">DAIGU TECHNOLOGY</a> — La Guinée des Lumières</p>
+    </footer>
+
+</body>
+</html>
