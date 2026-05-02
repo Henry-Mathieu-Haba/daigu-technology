@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const orig = btn.textContent;
         btn.textContent = '⏳ Envoi...'; btn.disabled = true;
         try {
-            const res = await fetch('https://formspree.io/f/mrejbl...', { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+            const res = await fetch('https://formspree.io/f/mrejblgd', { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
             btn.textContent = res.ok ? '✅ Envoyé' : '❌ Erreur';
             if (res.ok) form.reset();
         } catch { btn.textContent = '❌ Erreur'; }
