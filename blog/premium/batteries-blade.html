@@ -1,3 +1,10 @@
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const hasAccess = urlParams.get('access') === 'daigu_premium_2026';
+    if (!hasAccess) {
+        window.location.href = '../payment.html';
+    }
+</script>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
