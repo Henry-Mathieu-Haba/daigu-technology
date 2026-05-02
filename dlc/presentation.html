@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation — DLC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #05080d; --bg-card: #0a0f18; --text: #e0e4ec; --text-secondary: #6a7a94; --accent: #00d4aa; --accent-gold: #c8a96e; --border: #141c28; --font: 'Inter', sans-serif; --serif: 'Merriweather', serif; }
+        body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.8; }
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,8,13,0.9); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo .dlc { font-size: 1.4rem; font-weight: 900; letter-spacing: 3px; color: var(--text); text-decoration: none; }
+        .nav-logo .sub { font-size: 0.7rem; letter-spacing: 4px; color: var(--accent); display: block; }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.8rem; font-weight: 500; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+        .nav-back { color: var(--accent-gold) !important; }
+        .container { max-width: 850px; margin: 0 auto; padding: 6rem 2rem 3rem; }
+        h1 { font-family: var(--serif); font-size: 2.8rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.2; }
+        h1 span { color: var(--accent); }
+        .subtitle { color: var(--text-secondary); font-size: 1.15rem; margin-bottom: 3rem; }
+        h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; color: var(--text); }
+        p { color: var(--text-secondary); font-size: 1rem; margin-bottom: 1.5rem; }
+        blockquote { border-left: 3px solid var(--accent); padding: 1rem 1.5rem; margin: 2rem 0; background: rgba(0,212,170,0.03); font-style: italic; color: var(--text); }
+        blockquote footer { font-size: 0.85rem; color: var(--accent); margin-top: 0.5rem; font-style: normal; }
+        .mission-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin: 2rem 0; }
+        .mission-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; }
+        .mission-card h3 { font-size: 1rem; color: var(--accent); margin-bottom: 0.5rem; }
+        .mission-card p { font-size: 0.9rem; margin-bottom: 0; }
+        .values { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.5rem 0; }
+        .value-tag { background: rgba(0,212,170,0.08); border: 1px solid rgba(0,212,170,0.2); padding: 0.5rem 1.2rem; border-radius: 50px; font-size: 0.8rem; color: var(--accent); font-weight: 500; }
+        .footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 0.75rem; margin-top: 4rem; }
+        @media (max-width: 768px) { .mission-grid { grid-template-columns: 1fr; } h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo"><span class="dlc">DLC</span><span class="sub">Laboratory Center</span></a>
+            <div class="nav-links">
+                <a href="presentation.html" class="active">Présentation</a>
+                <a href="pipeline.html">Pipeline</a>
+                <a href="convergence.html">Convergence</a>
+                <a href="fablab.html">FabLab</a>
+                <a href="publications.html">Publications</a>
+                <a href="rejoindre.html">Rejoindre</a>
+                <a href="../index.html" class="nav-back">← DAIGU</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Le <span>Cerveau</span> de la souveraineté</h1>
+        <p class="subtitle">Le DAIGU LABORATORY CENTER n'est pas un laboratoire au sens classique. C'est le centre névralgique de tout l'écosystème DAIGU.</p>
+
+        <h2>Origine</h2>
+        <p>
+            DLC est né d'un constat simple : l'Afrique importe des technologies qu'elle ne maîtrise pas. Des téléphones dont elle ne comprend pas le système d'exploitation. Des clouds dont elle ne contrôle pas les serveurs. Des batteries qu'elle ne sait pas réparer.
+        </p>
+        <p>
+            Le DAIGU LABORATORY CENTER a été conçu comme le point-origine d'une inversion totale de cette logique. Ici, nous ne consommons pas la technologie. Nous la créons.
+        </p>
+
+        <blockquote>
+            « DLC est l'endroit où les idées deviennent des prototypes, les prototypes des brevets, et les brevets des produits. C'est le Cerveau. Sans lui, le Corps ne sait pas où aller. »
+            <footer>— Le Cerveau, Fondateur de DAIGU</footer>
+        </blockquote>
+
+        <h2>Double mission</h2>
+        <div class="mission-grid">
+            <div class="mission-card">
+                <h3>Recherche fondamentale</h3>
+                <p>Explorer les frontières de la science : nouveaux matériaux issus de la valorisation des résidus de bauxite, architectures de micro-noyaux temps réel, algorithmes d'intelligence artificielle agentique.</p>
+            </div>
+            <div class="mission-card">
+                <h3>Application industrielle</h3>
+                <p>Transformer les découvertes en solutions concrètes que les filiales — CORE SYSTEMS, ELECTRONICS, ENERGY LABS, CLOUD & SHIELD — peuvent industrialiser et déployer.</p>
+            </div>
+        </div>
+
+        <h2>Valeurs</h2>
+        <div class="values">
+            <span class="value-tag">Souveraineté</span>
+            <span class="value-tag">Excellence</span>
+            <span class="value-tag">Rigueur scientifique</span>
+            <span class="value-tag">Indépendance</span>
+            <span class="value-tag">Innovation ouverte</span>
+            <span class="value-tag">Ancrage africain</span>
+            <span class="value-tag">Durabilité</span>
+            <span class="value-tag">Transmission</span>
+        </div>
+
+        <h2>Le Bureau des Projets de Convergence</h2>
+        <p>
+            C'est l'organe le plus stratégique de DLC. Chaque trimestre, il impose aux quatre filiales un projet commun — un drone, une tablette, une micro-grid — qui les force à travailler ensemble. Sans ce bureau, chaque filiale travaillerait en silo. Avec lui, l'intégration est testée, validée, garantie.
+        </p>
+
+        <h2>Le sanctuaire du Jumeau Numérique</h2>
+        <p>
+            Chaque produit DAIGU existe d'abord sous forme de modèle virtuel, simulé dans des conditions extrêmes avant même que la première pièce physique ne soit fabriquée. Cette approche réduit les coûts, accélère les itérations et garantit que nos produits sont conçus pour durer sous les tropiques.
+        </p>
+
+        <h2>Un lieu, une ambition</h2>
+        <p>
+            DLC est implanté à Conakry, en République de Guinée. Son FabLab avancé — imprimantes 3D métal, fraiseuses CNC 5 axes, enceintes climatiques — permet de prototyper sans dépendre d'aucune infrastructure étrangère. C'est la condition pour garder la maîtrise totale de notre propriété intellectuelle.
+        </p>
+        <p>
+            DLC est aussi le partenaire naturel de <strong>DAIGU UNIVERSITY (DUTS)</strong>. Les étudiants en formation duale y passent 50 % de leur temps, travaillant sur des projets réels aux côtés de nos chercheurs.
+        </p>
+    </div>
+
+    <footer class="footer">
+        <p>DAIGU LABORATORY CENTER — <a href="../index.html">DAIGU TECHNOLOGY</a> — La Guinée des Lumières</p>
+    </footer>
+
+</body>
+</html>
