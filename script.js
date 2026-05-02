@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- TRADUCTIONS (7 LANGUES) ---
     const i18n = {
         fr: {
-            nav_ecosystem:"Écosystème",nav_products:"Produits",nav_filiales:"Filiales",nav_video:"Vision",nav_roadmap:"Roadmap",nav_contact:"Contact",nav_blog:"Research Hub",
+            nav_ecosystem:"Écosystème",nav_products:"Produits",nav_services:"Services",nav_filiales:"Filiales",nav_video:"Vision",nav_roadmap:"Roadmap",nav_contact:"Contact",nav_blog:"Research Hub",
             hero_badge:"DAIGU TECHNOLOGY • Guinée 2026",hero_line1:"La Guinée des",hero_line2:"Lumières",
             hero_motto:"Soyez des fous à la porte de la raison des hommes",hero_scroll:"Découvrir",
             s1_tag:"Recherche & Développement",s1_desc:"Le Cerveau de l'écosystème. Au cœur de Conakry, nos chercheurs développent les jumeaux numériques, l'intelligence artificielle et les prototypes qui alimentent toutes nos filiales. Un laboratoire souverain pour une innovation sans dépendance.",
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             footer_doc_wp:"Livre Blanc (PDF)",footer_doc_partner:"Dossier Partenariat",footer_private:"Espace Partenaires"
         },
         en: {
-            nav_ecosystem:"Ecosystem",nav_products:"Products",nav_filiales:"Subsidiaries",nav_video:"Vision",nav_roadmap:"Roadmap",nav_contact:"Contact",nav_blog:"Blog",
+            nav_ecosystem:"Ecosystem",nav_products:"Products",nav_services:"Services",nav_filiales:"Subsidiaries",nav_video:"Vision",nav_roadmap:"Roadmap",nav_contact:"Contact",nav_blog:"Blog",
             hero_badge:"DAIGU TECHNOLOGY • Guinea 2026",hero_line1:"The Guinea of",hero_line2:"Lights",
             hero_motto:"Be fools at the gate of men's reason",hero_scroll:"Discover",
             s1_tag:"Research & Development",s1_desc:"The Brain of the ecosystem. In the heart of Conakry, our researchers develop digital twins, artificial intelligence, and prototypes for all our subsidiaries. A sovereign laboratory for innovation without dependency.",
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             footer_doc_wp:"White Paper (PDF)",footer_doc_partner:"Partnership Dossier",footer_private:"Partners Area"
         },
         zh: {
-            nav_ecosystem:"生态系统",nav_products:"产品",nav_filiales:"子公司",nav_video:"愿景",nav_roadmap:"路线图",nav_contact:"联系",nav_blog:"博客",
+            nav_ecosystem:"生态系统",nav_products:"产品",nav_services:"服务",nav_filiales:"子公司",nav_video:"愿景",nav_roadmap:"路线图",nav_contact:"联系",nav_blog:"博客",
             hero_badge:"DAIGU TECHNOLOGY • 几内亚 2026",hero_line1:"光明",hero_line2:"几内亚",
             hero_motto:"做人类理性之门前的疯子",hero_scroll:"探索",
             s1_tag:"研发",s1_desc:"生态系统的大脑。在科纳克里市中心，我们的研究人员开发数字孪生、人工智能和原型，为所有子公司提供动力。",
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             footer_doc_wp:"白皮书 (PDF)",footer_doc_partner:"合作档案",footer_private:"合作伙伴专区"
         },
         de: {
-            nav_ecosystem:"Ökosystem",nav_products:"Produkte",nav_filiales:"Tochtergesellschaften",nav_video:"Vision",nav_roadmap:"Roadmap",nav_contact:"Kontakt",nav_blog:"Blog",
+            nav_ecosystem:"Ökosystem",nav_products:"Produkte",nav_services:"Dienstleistungen",nav_filiales:"Tochtergesellschaften",nav_video:"Vision",nav_roadmap:"Roadmap",nav_contact:"Kontakt",nav_blog:"Blog",
             hero_badge:"DAIGU TECHNOLOGY • Guinea 2026",hero_line1:"Das Guinea der",hero_line2:"Lichter",
             hero_motto:"Seid Narren am Tor der Vernunft der Menschen",hero_scroll:"Entdecken",
             s1_tag:"Forschung & Entwicklung",s1_desc:"Das Gehirn des Ökosystems. Im Herzen von Conakry entwickeln unsere Forscher digitale Zwillinge, KI und Prototypen für alle unsere Tochtergesellschaften.",
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
             footer_doc_wp:"Whitepaper (PDF)",footer_doc_partner:"Partnerschaftsdossier",footer_private:"Partnerbereich"
         },
         ru: {
-            nav_ecosystem:"Экосистема",nav_products:"Продукты",nav_filiales:"Компании",nav_video:"Видение",nav_roadmap:"План",nav_contact:"Контакт",nav_blog:"Блог",
+            nav_ecosystem:"Экосистема",nav_products:"Продукты",nav_services:"Услуги",nav_filiales:"Компании",nav_video:"Видение",nav_roadmap:"План",nav_contact:"Контакт",nav_blog:"Блог",
             hero_badge:"DAIGU TECHNOLOGY • Гвинея 2026",hero_line1:"Гвинея",hero_line2:"Света",
             hero_motto:"Будьте безумцами у ворот разума людей",hero_scroll:"Узнать",
             s1_tag:"Исследования и разработки",s1_desc:"Мозг экосистемы. В центре Конакри наши исследователи создают цифровые двойники, ИИ и прототипы для всех наших компаний.",
@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', () => {
             footer_doc_wp:"Белая книга (PDF)",footer_doc_partner:"Партнёрское досье",footer_private:"Партнёрская зона"
         },
         ar: {
-            nav_ecosystem:"النظام البيئي",nav_products:"المنتجات",nav_filiales:"الشركات",nav_video:"الرؤية",nav_roadmap:"الخريطة",nav_contact:"اتصال",nav_blog:"مدونة",
+            nav_ecosystem:"النظام البيئي",nav_products:"المنتجات",nav_services:"خدمات",nav_filiales:"الشركات",nav_video:"الرؤية",nav_roadmap:"الخريطة",nav_contact:"اتصال",nav_blog:"مدونة",
             hero_badge:"DAIGU TECHNOLOGY • غينيا 2026",hero_line1:"غينيا",hero_line2:"الأنوار",
             hero_motto:"كونوا مجانين على باب عقل البشر",hero_scroll:"اكتشف",
             s1_tag:"البحث والتطوير",s1_desc:"عقل النظام البيئي. في قلب كوناكري، يطور باحثونا التوائم الرقمية والذكاء الاصطناعي والنماذج الأولية لجميع شركاتنا.",
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
             footer_doc_wp:"الكتاب الأبيض (PDF)",footer_doc_partner:"ملف الشراكة",footer_private:"منطقة الشركاء"
         },
         es: {
-            nav_ecosystem:"Ecosistema",nav_products:"Productos",nav_filiales:"Filiales",nav_video:"Visión",nav_roadmap:"Hoja de ruta",nav_contact:"Contacto",nav_blog:"Blog",
+            nav_ecosystem:"Ecosistema",nav_products:"Productos",nav_services:"Servicios",nav_filiales:"Filiales",nav_video:"Visión",nav_roadmap:"Hoja de ruta",nav_contact:"Contacto",nav_blog:"Blog",
             hero_badge:"DAIGU TECHNOLOGY • Guinea 2026",hero_line1:"La Guinea de las",hero_line2:"Luces",
             hero_motto:"Sed locos a la puerta de la razón de los hombres",hero_scroll:"Descubrir",
             s1_tag:"Investigación y Desarrollo",s1_desc:"El Cerebro del ecosistema. En el corazón de Conakry, nuestros investigadores desarrollan gemelos digitales, inteligencia artificial y prototipos para todas nuestras filiales.",
