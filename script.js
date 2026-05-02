@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- TRADUCTIONS (7 LANGUES) ---
     const i18n = {
         fr: {
-            nav_ecosystem:"Écosystème",nav_products:"Produits",nav_filiales:"Filiales",nav_video:"Vision",nav_roadmap:"Roadmap",nav_contact:"Contact",nav_blog:"Blog",
+            nav_ecosystem:"Écosystème",nav_products:"Produits",nav_filiales:"Filiales",nav_video:"Vision",nav_roadmap:"Roadmap",nav_contact:"Contact",nav_blog:"Research Hub",
             hero_badge:"DAIGU TECHNOLOGY • Guinée 2026",hero_line1:"La Guinée des",hero_line2:"Lumières",
             hero_motto:"Soyez des fous à la porte de la raison des hommes",hero_scroll:"Découvrir",
             s1_tag:"Recherche & Développement",s1_desc:"Le Cerveau de l'écosystème. Au cœur de Conakry, nos chercheurs développent les jumeaux numériques, l'intelligence artificielle et les prototypes qui alimentent toutes nos filiales. Un laboratoire souverain pour une innovation sans dépendance.",
