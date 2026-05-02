@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets de Convergence — DLC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #05080d; --bg-card: #0a0f18; --text: #e0e4ec; --text-secondary: #6a7a94; --accent: #00d4aa; --accent-gold: #c8a96e; --border: #141c28; --font: 'Inter', sans-serif; }
+        body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.7; }
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,8,13,0.9); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo .dlc { font-size: 1.4rem; font-weight: 900; letter-spacing: 3px; color: var(--text); text-decoration: none; }
+        .nav-logo .sub { font-size: 0.7rem; letter-spacing: 4px; color: var(--accent); display: block; }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.8rem; font-weight: 500; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+        .nav-back { color: var(--accent-gold) !important; }
+        .container { max-width: 900px; margin: 0 auto; padding: 6rem 2rem 3rem; }
+        h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 0.5rem; }
+        h1 span { color: var(--accent); }
+        .subtitle { color: var(--text-secondary); margin-bottom: 3rem; }
+        .conv-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; margin-bottom: 1.5rem; }
+        .conv-card h3 { font-size: 1.2rem; margin-bottom: 0.8rem; }
+        .conv-card .meta { font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+        .conv-card p { color: var(--text-secondary); }
+        .conv-filiales { display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; }
+        .conv-filiale { background: rgba(0,212,170,0.1); border: 1px solid rgba(0,212,170,0.3); padding: 0.3rem 0.8rem; border-radius: 50px; font-size: 0.7rem; color: var(--accent); }
+        .footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 0.75rem; margin-top: 3rem; }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo"><span class="dlc">DLC</span><span class="sub">Laboratory Center</span></a>
+            <div class="nav-links">
+                <a href="pipeline.html">Pipeline</a>
+                <a href="convergence.html" class="active">Convergence</a>
+                <a href="fablab.html">FabLab</a>
+                <a href="publications.html">Publications</a>
+                <a href="rejoindre.html">Rejoindre</a>
+                <a href="../index.html" class="nav-back">← DAIGU</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Projets de <span>Convergence</span></h1>
+        <p class="subtitle">Chaque trimestre, DLC impose aux quatre filiales un projet commun. L'objectif : forcer l'intégration verticale de l'écosystème.</p>
+
+        <div class="conv-card">
+            <div class="meta">EN PRÉPARATION — Q3 2026</div>
+            <h3>Drone de surveillance minière autonome</h3>
+            <p>Un drone capable de cartographier un site minier, transmettre les données en temps réel via le Cloud national, et fonctionner 6 heures sans recharge grâce à une batterie conçue par ENERGY LABS.</p>
+            <div class="conv-filiales">
+                <span class="conv-filiale">CORE SYSTEMS — Firmware & OS embarqué</span>
+                <span class="conv-filiale">ELECTRONICS — Châssis & caméra</span>
+                <span class="conv-filiale">ENERGY LABS — Batterie</span>
+                <span class="conv-filiale">CLOUD & SHIELD — Liaison sécurisée</span>
+            </div>
+        </div>
+
+        <div class="conv-card">
+            <div class="meta">EN PRÉPARATION — Q4 2026</div>
+            <h3>Tablette éducative DUTS</h3>
+            <p>Une tablette durcie, tropicalisée, préchargée avec l'environnement de développement DAIGU OS. Chaque étudiant de première année en recevra une.</p>
+            <div class="conv-filiales">
+                <span class="conv-filiale">CORE SYSTEMS — DAIGU OS Lite</span>
+                <span class="conv-filiale">ELECTRONICS — Assemblage & TROPIC-PROOF</span>
+                <span class="conv-filiale">ENERGY LABS — Batterie longue durée</span>
+                <span class="conv-filiale">CLOUD & SHIELD — Sécurité by design</span>
+            </div>
+        </div>
+
+        <div class="conv-card">
+            <div class="meta">EN PRÉPARATION — Q1 2027</div>
+            <h3>Micro-grid solaire intelligent</h3>
+            <p>Un système complet de production, stockage et distribution d'énergie solaire pour alimenter les data centers de DAIGU CLOUD en zone rurale.</p>
+            <div class="conv-filiales">
+                <span class="conv-filiale">ENERGY LABS — Panneaux & stockage</span>
+                <span class="conv-filiale">CLOUD & SHIELD — Monitoring réseau</span>
+                <span class="conv-filiale">CORE SYSTEMS — IA prédictive</span>
+                <span class="conv-filiale">ELECTRONICS — Capteurs IoT</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>DAIGU LABORATORY CENTER — <a href="../index.html">DAIGU TECHNOLOGY</a> — La Guinée des Lumières</p>
+    </footer>
+
+</body>
+</html>

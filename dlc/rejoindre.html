@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejoindre DLC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #05080d; --bg-card: #0a0f18; --text: #e0e4ec; --text-secondary: #6a7a94; --accent: #00d4aa; --accent-gold: #c8a96e; --border: #141c28; --font: 'Inter', sans-serif; }
+        body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.7; }
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,8,13,0.9); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo .dlc { font-size: 1.4rem; font-weight: 900; letter-spacing: 3px; color: var(--text); text-decoration: none; }
+        .nav-logo .sub { font-size: 0.7rem; letter-spacing: 4px; color: var(--accent); display: block; }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.8rem; font-weight: 500; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+        .nav-back { color: var(--accent-gold) !important; }
+        .container { max-width: 800px; margin: 0 auto; padding: 6rem 2rem 3rem; }
+        h1 { font-size: 2.5rem; font-weight: 900; margin-bottom: 0.5rem; }
+        h1 span { color: var(--accent); }
+        .subtitle { color: var(--text-secondary); margin-bottom: 3rem; }
+        .offer-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; margin-bottom: 1.5rem; }
+        .offer-card h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+        .offer-card .location { font-size: 0.75rem; color: var(--accent); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+        .offer-card p { color: var(--text-secondary); margin-bottom: 1rem; }
+        .offer-card .skills { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .skill-tag { background: rgba(0,212,170,0.08); border: 1px solid rgba(0,212,170,0.2); padding: 0.3rem 0.8rem; border-radius: 50px; font-size: 0.7rem; color: var(--accent); }
+        .duts-section { background: rgba(200,169,110,0.05); border: 1px solid rgba(200,169,110,0.2); border-radius: 8px; padding: 2rem; text-align: center; margin-top: 3rem; }
+        .duts-section h3 { color: var(--accent-gold); margin-bottom: 0.5rem; }
+        .duts-section a { color: var(--accent-gold); font-weight: 700; }
+        .footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 0.75rem; margin-top: 3rem; }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo"><span class="dlc">DLC</span><span class="sub">Laboratory Center</span></a>
+            <div class="nav-links">
+                <a href="pipeline.html">Pipeline</a>
+                <a href="convergence.html">Convergence</a>
+                <a href="fablab.html">FabLab</a>
+                <a href="publications.html">Publications</a>
+                <a href="rejoindre.html" class="active">Rejoindre</a>
+                <a href="../index.html" class="nav-back">← DAIGU</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Rejoindre <span>DLC</span></h1>
+        <p class="subtitle">Nous recrutons des chercheurs, ingénieurs et techniciens qui veulent construire la souveraineté technologique guinéenne.</p>
+
+        <div class="offer-card">
+            <h3>Ingénieur Système — Noyau DAIGU OS</h3>
+            <div class="location">CORE SYSTEMS · Conakry</div>
+            <p>Développement du micro-noyau temps réel. Maîtrise de Rust ou C, architectures ARM64, compilateurs LLVM.</p>
+            <div class="skills"><span class="skill-tag">Rust</span><span class="skill-tag">C</span><span class="skill-tag">ARM64</span><span class="skill-tag">LLVM</span><span class="skill-tag">Temps réel</span></div>
+        </div>
+
+        <div class="offer-card">
+            <h3>Chercheur en Matériaux — Valorisation Bauxite</h3>
+            <div class="location">ENERGY LABS · Conakry</div>
+            <p>Recherche sur la transformation des résidus de bauxite en composants céramiques pour l'électronique.</p>
+            <div class="skills"><span class="skill-tag">Chimie des matériaux</span><span class="skill-tag">Céramiques</span><span class="skill-tag">Électrochimie</span></div>
+        </div>
+
+        <div class="offer-card">
+            <h3>Ingénieur Cybersécurité — Red Team</h3>
+            <div class="location">CLOUD & SHIELD · Conakry</div>
+            <p>Test d'intrusion, audit de protocoles, développement d'outils de renseignement. Vous casserez tout avant les autres.</p>
+            <div class="skills"><span class="skill-tag">Pentest</span><span class="skill-tag">Réseaux</span><span class="skill-tag">Cryptographie</span><span class="skill-tag">Python</span></div>
+        </div>
+
+        <div class="duts-section">
+            <h3>🎓 Vous êtes étudiant à DUTS ?</h3>
+            <p>Les projets de DLC sont ouverts aux étudiants en formation duale. Contactez votre école pour postuler.</p>
+            <a href="mailto:architecture@daigu-technology.com">Contacter DLC →</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>DAIGU LABORATORY CENTER — <a href="../index.html">DAIGU TECHNOLOGY</a> — La Guinée des Lumières</p>
+    </footer>
+
+</body>
+</html>
