@@ -1,5 +1,6 @@
 // ============================================
 // DAIGU TECHNOLOGY — Scripts Complets
+// 7 langues — Footer colonnes — Formspree
 // ============================================
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -69,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     revealElements.forEach(el => observer.observe(el));
 
-    // --- TRADUCTIONS ---
+    // --- TRADUCTIONS (7 LANGUES) ---
     const i18n = {
         fr: {
             nav_ecosystem:"Écosystème",nav_products:"Produits",nav_filiales:"Filiales",nav_video:"Vision",nav_roadmap:"Roadmap",nav_contact:"Contact",nav_blog:"Blog",
@@ -94,7 +95,9 @@ document.addEventListener('DOMContentLoaded', () => {
             tl_phase3:"Phase 3",tl_3_title:"Démultiplication",tl_3_desc:"Expansion régionale, DAIGU OS multi-support.",
             partner_tag:"Partenariat",partner_title:"Construisons l'avenir ensemble",partner_desc:"DAIGU est ouvert à la coopération bilatérale dans le cadre des Ateliers Luban et du FOCAC. Nous collaborons avec des partenaires qui partagent notre vision de souveraineté technologique.",
             partner_private:"🔒 Espace Partenaires",partner_send:"Envoyer",
-            footer_motto:"Soyez des fous à la porte de la raison des hommes",footer_tagline:"La Guinée des Lumières"
+            footer_motto:"Soyez des fous à la porte de la raison des hommes",footer_tagline:"La Guinée des Lumières",
+            footer_nav_title:"Navigation",footer_docs_title:"Ressources",footer_legal_title:"Mentions légales",
+            footer_doc_wp:"Livre Blanc (PDF)",footer_doc_partner:"Dossier Partenariat",footer_private:"Espace Partenaires"
         },
         en: {
             nav_ecosystem:"Ecosystem",nav_products:"Products",nav_filiales:"Subsidiaries",nav_video:"Vision",nav_roadmap:"Roadmap",nav_contact:"Contact",nav_blog:"Blog",
@@ -119,7 +122,9 @@ document.addEventListener('DOMContentLoaded', () => {
             tl_phase3:"Phase 3",tl_3_title:"Scaling Up",tl_3_desc:"Regional expansion, multi-device DAIGU OS.",
             partner_tag:"Partnership",partner_title:"Let's build the future together",partner_desc:"DAIGU is open to bilateral cooperation under the Luban Workshops and FOCAC framework. We collaborate with partners who share our vision of technological sovereignty.",
             partner_private:"🔒 Partners Area",partner_send:"Send",
-            footer_motto:"Be fools at the gate of men's reason",footer_tagline:"The Guinea of Lights"
+            footer_motto:"Be fools at the gate of men's reason",footer_tagline:"The Guinea of Lights",
+            footer_nav_title:"Navigation",footer_docs_title:"Resources",footer_legal_title:"Legal Notice",
+            footer_doc_wp:"White Paper (PDF)",footer_doc_partner:"Partnership Dossier",footer_private:"Partners Area"
         },
         zh: {
             nav_ecosystem:"生态系统",nav_products:"产品",nav_filiales:"子公司",nav_video:"愿景",nav_roadmap:"路线图",nav_contact:"联系",nav_blog:"博客",
@@ -144,7 +149,9 @@ document.addEventListener('DOMContentLoaded', () => {
             tl_phase3:"第3阶段",tl_3_title:"扩展",tl_3_desc:"区域扩张，多设备DAIGU OS。",
             partner_tag:"合作",partner_title:"共创未来",partner_desc:"DAIGU对在鲁班工坊和中非合作论坛框架下的双边合作持开放态度。",
             partner_private:"🔒 合作伙伴专区",partner_send:"发送",
-            footer_motto:"做人类理性之门前的疯子",footer_tagline:"光明几内亚"
+            footer_motto:"做人类理性之门前的疯子",footer_tagline:"光明几内亚",
+            footer_nav_title:"导航",footer_docs_title:"资源",footer_legal_title:"法律声明",
+            footer_doc_wp:"白皮书 (PDF)",footer_doc_partner:"合作档案",footer_private:"合作伙伴专区"
         },
         de: {
             nav_ecosystem:"Ökosystem",nav_products:"Produkte",nav_filiales:"Tochtergesellschaften",nav_video:"Vision",nav_roadmap:"Roadmap",nav_contact:"Kontakt",nav_blog:"Blog",
@@ -169,7 +176,9 @@ document.addEventListener('DOMContentLoaded', () => {
             tl_phase3:"Phase 3",tl_3_title:"Skalierung",tl_3_desc:"Regionale Expansion, Multi-Geräte DAIGU OS.",
             partner_tag:"Partnerschaft",partner_title:"Gemeinsam die Zukunft bauen",partner_desc:"DAIGU ist offen für bilaterale Zusammenarbeit im Rahmen der Luban-Werkstätten und des FOCAC.",
             partner_private:"🔒 Partnerbereich",partner_send:"Senden",
-            footer_motto:"Seid Narren am Tor der Vernunft der Menschen",footer_tagline:"Das Guinea der Lichter"
+            footer_motto:"Seid Narren am Tor der Vernunft der Menschen",footer_tagline:"Das Guinea der Lichter",
+            footer_nav_title:"Navigation",footer_docs_title:"Ressourcen",footer_legal_title:"Impressum",
+            footer_doc_wp:"Whitepaper (PDF)",footer_doc_partner:"Partnerschaftsdossier",footer_private:"Partnerbereich"
         },
         ru: {
             nav_ecosystem:"Экосистема",nav_products:"Продукты",nav_filiales:"Компании",nav_video:"Видение",nav_roadmap:"План",nav_contact:"Контакт",nav_blog:"Блог",
@@ -194,7 +203,9 @@ document.addEventListener('DOMContentLoaded', () => {
             tl_phase3:"Фаза 3",tl_3_title:"Масштабирование",tl_3_desc:"Региональная экспансия, DAIGU OS на разных устройствах.",
             partner_tag:"Партнёрство",partner_title:"Построим будущее вместе",partner_desc:"DAIGU открыт для двустороннего сотрудничества в рамках Мастерских Лубань и FOCAC.",
             partner_private:"🔒 Партнёрская зона",partner_send:"Отправить",
-            footer_motto:"Будьте безумцами у ворот разума людей",footer_tagline:"Гвинея Света"
+            footer_motto:"Будьте безумцами у ворот разума людей",footer_tagline:"Гвинея Света",
+            footer_nav_title:"Навигация",footer_docs_title:"Ресурсы",footer_legal_title:"Правовая информация",
+            footer_doc_wp:"Белая книга (PDF)",footer_doc_partner:"Партнёрское досье",footer_private:"Партнёрская зона"
         },
         ar: {
             nav_ecosystem:"النظام البيئي",nav_products:"المنتجات",nav_filiales:"الشركات",nav_video:"الرؤية",nav_roadmap:"الخريطة",nav_contact:"اتصال",nav_blog:"مدونة",
@@ -219,7 +230,9 @@ document.addEventListener('DOMContentLoaded', () => {
             tl_phase3:"المرحلة 3",tl_3_title:"التوسع",tl_3_desc:"توسع إقليمي، DAIGU OS على أجهزة متعددة.",
             partner_tag:"شراكة",partner_title:"لنبني المستقبل معاً",partner_desc:"DAIGU منفتحة على التعاون الثنائي في إطار ورش عمل لوبان وFOCAC.",
             partner_private:"🔒 منطقة الشركاء",partner_send:"إرسال",
-            footer_motto:"كونوا مجانين على باب عقل البشر",footer_tagline:"غينيا الأنوار"
+            footer_motto:"كونوا مجانين على باب عقل البشر",footer_tagline:"غينيا الأنوار",
+            footer_nav_title:"التنقل",footer_docs_title:"الموارد",footer_legal_title:"إشعار قانوني",
+            footer_doc_wp:"الكتاب الأبيض (PDF)",footer_doc_partner:"ملف الشراكة",footer_private:"منطقة الشركاء"
         },
         es: {
             nav_ecosystem:"Ecosistema",nav_products:"Productos",nav_filiales:"Filiales",nav_video:"Visión",nav_roadmap:"Hoja de ruta",nav_contact:"Contacto",nav_blog:"Blog",
@@ -244,7 +257,9 @@ document.addEventListener('DOMContentLoaded', () => {
             tl_phase3:"Fase 3",tl_3_title:"Expansión",tl_3_desc:"Expansión regional, DAIGU OS multi-dispositivo.",
             partner_tag:"Asociación",partner_title:"Construyamos el futuro juntos",partner_desc:"DAIGU está abierto a la cooperación bilateral en el marco de los Talleres Luban y el FOCAC.",
             partner_private:"🔒 Área de Socios",partner_send:"Enviar",
-            footer_motto:"Sed locos a la puerta de la razón de los hombres",footer_tagline:"La Guinea de las Luces"
+            footer_motto:"Sed locos a la puerta de la razón de los hombres",footer_tagline:"La Guinea de las Luces",
+            footer_nav_title:"Navegación",footer_docs_title:"Recursos",footer_legal_title:"Aviso legal",
+            footer_doc_wp:"Libro Blanco (PDF)",footer_doc_partner:"Dosier de Asociación",footer_private:"Área de Socios"
         }
     };
 
@@ -284,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const orig = btn.textContent;
         btn.textContent = '⏳ Envoi...'; btn.disabled = true;
         try {
-            const res = await fetch('https://formspree.io/f/mrejblgd', { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+            const res = await fetch('https://formspree.io/f/mrejbl...', { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
             btn.textContent = res.ok ? '✅ Envoyé' : '❌ Erreur';
             if (res.ok) form.reset();
         } catch { btn.textContent = '❌ Erreur'; }
