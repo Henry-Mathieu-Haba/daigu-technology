@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAIGU LABORATORY CENTER — Le Cerveau</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #05080d; --bg-card: #0a0f18; --text: #e0e4ec; --text-secondary: #6a7a94; --accent: #00d4aa; --accent-gold: #c8a96e; --border: #141c28; --font: 'Inter', sans-serif; --mono: 'JetBrains Mono', monospace; }
+        body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.7; }
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(5,8,13,0.9); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { text-decoration: none; color: var(--text); }
+        .nav-logo .dlc { font-size: 1.4rem; font-weight: 900; letter-spacing: 3px; }
+        .nav-logo .sub { font-size: 0.7rem; letter-spacing: 4px; color: var(--accent); display: block; }
+        .nav-links { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+        .nav-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.8rem; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+        .nav-back { color: var(--accent-gold) !important; font-weight: 600; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 5rem 2rem 3rem; }
+        .hero { text-align: center; padding: 5rem 0 4rem; }
+        .hero-badge { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); border: 1px solid rgba(0,212,170,0.3); padding: 0.4rem 1rem; border-radius: 50px; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; letter-spacing: -1px; margin-bottom: 1rem; }
+        .hero h1 span { color: var(--accent); }
+        .hero p { color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto 2rem; }
+        .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 4rem; }
+        .stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 2rem; text-align: center; }
+        .stat-number { font-family: var(--mono); font-size: 2.2rem; font-weight: 700; color: var(--accent); }
+        .stat-label { font-size: 0.7rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 2px; margin-top: 0.3rem; }
+        .section-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem; }
+        .pipeline-preview { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+        .pipe-col { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; }
+        .pipe-col h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+        .pipe-col h3.recherche { color: #5b9bd5; } .pipe-col h3.conception { color: #f4a742; } .pipe-col h3.dev { color: #00d4aa; } .pipe-col h3.proto { color: #c8a96e; }
+        .pipe-item { font-size: 0.8rem; color: var(--text-secondary); padding: 0.4rem 0; border-bottom: 1px solid var(--border); }
+        .pipe-item:last-child { border: none; }
+        .pipe-link { display: block; text-align: center; margin-top: 1.5rem; color: var(--accent); font-weight: 600; font-size: 0.9rem; }
+        .footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 0.75rem; }
+        .footer a { color: var(--accent-gold); }
+        @media (max-width: 768px) { .stats { grid-template-columns: repeat(2, 1fr); } .pipeline-preview { grid-template-columns: 1fr; } .nav-links { gap: 0.8rem; } }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <span class="dlc">DLC</span>
+                <span class="sub">Laboratory Center</span>
+            </a>
+            <div class="nav-links">
+                <a href="pipeline.html">Pipeline</a>
+                <a href="convergence.html">Convergence</a>
+                <a href="fablab.html">FabLab</a>
+                <a href="publications.html">Publications</a>
+                <a href="rejoindre.html">Rejoindre</a>
+                <a href="../index.html" class="nav-back">← DAIGU</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <div class="hero-badge">DAIGU LABORATORY CENTER</div>
+            <h1>Le <span>Cerveau</span></h1>
+            <p>Centre de recherche et d'innovation souverain. Au cœur de Conakry, nous transformons les idées en prototypes, les prototypes en brevets, les brevets en produits.</p>
+        </section>
+
+        <div class="stats">
+            <div class="stat"><div class="stat-number">15</div><div class="stat-label">Projets actifs</div></div>
+            <div class="stat"><div class="stat-number">4</div><div class="stat-label">Filiales</div></div>
+            <div class="stat"><div class="stat-number">∞</div><div class="stat-label">Étudiants DUTS</div></div>
+            <div class="stat"><div class="stat-number">0</div><div class="stat-label">Dépendances</div></div>
+        </div>
+
+        <h2 class="section-title">Pipeline Innovation</h2>
+        <div class="pipeline-preview">
+            <div class="pipe-col"><h3 class="recherche">Recherche</h3><div class="pipe-item">DAIGU OS — Véhicule</div><div class="pipe-item">DAIGU OS — Montre</div><div class="pipe-item">DAIGU OS — TV</div><div class="pipe-item">Jumeau Numérique</div><div class="pipe-item">Logiciel renseignement</div><div class="pipe-item">Drone agricole</div></div>
+            <div class="pipe-col"><h3 class="conception">Conception</h3><div class="pipe-item">DAIGU OS — Console</div><div class="pipe-item">DAIGU OS — Tablette</div><div class="pipe-item">Antivirus national</div><div class="pipe-item">Pare-feu national</div><div class="pipe-item">Tablette TROPIC-PROOF</div></div>
+            <div class="pipe-col"><h3 class="dev">Développement</h3><div class="pipe-item">DAIGU OS — PC</div><div class="pipe-item">Protocoles sécurité</div><div class="pipe-item">Services Cloud</div></div>
+            <div class="pipe-col"><h3 class="proto">Prototypage</h3><div class="pipe-item">Batterie 10 kWh</div></div>
+        </div>
+        <a href="pipeline.html" class="pipe-link">Voir le pipeline complet →</a>
+    </div>
+
+    <footer class="footer">
+        <p>DAIGU LABORATORY CENTER — <a href="../index.html">DAIGU TECHNOLOGY</a> — La Guinée des Lumières</p>
+    </footer>
+
+</body>
+</html>
