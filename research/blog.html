@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DAIGU Research Hub — Publications scientifiques et technologiques par les ingénieurs de DAIGU.">
+    <meta property="og:title" content="DAIGU Research Hub">
+    <meta property="og:description" content="La recherche qui construit la souveraineté.">
+    <title>DAIGU Research Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #fdfdfd; color: #1a1a1a; line-height: 1.7; }
+        .hub-nav { background: #fff; border-bottom: 1px solid #e0e0e0; position: fixed; top: 0; left: 0; right: 0; z-index: 100; }
+        .hub-nav-inner { max-width: 1100px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .hub-logo { font-size: 1.3rem; font-weight: 800; color: #1a1a1a; text-decoration: none; }
+        .hub-logo span { color: #c8a96e; }
+        .hub-nav-links { display: flex; gap: 2rem; align-items: center; }
+        .hub-nav-links a { color: #666; text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.3s; }
+        .hub-nav-links a:hover { color: #c8a96e; }
+        .hub-nav-back { color: #c8a96e; text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+        .hub-container { max-width: 1100px; margin: 0 auto; padding: 6rem 2rem 3rem; }
+        .hub-header { margin-bottom: 3rem; }
+        .hub-header h1 { font-family: 'Merriweather', serif; font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .hub-header p { color: #666; font-size: 1.1rem; }
+        .hub-stats { display: flex; gap: 2rem; margin-bottom: 3rem; padding: 1.5rem; background: #f8f8f8; border-radius: 8px; }
+        .hub-stat { text-align: center; }
+        .hub-stat-number { font-size: 1.8rem; font-weight: 800; color: #c8a96e; }
+        .hub-stat-label { font-size: 0.75rem; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+        .hub-search { margin-bottom: 3rem; }
+        .hub-search input { width: 100%; padding: 1rem 1.5rem; border: 1px solid #ddd; border-radius: 50px; font-size: 1rem; font-family: 'Inter', sans-serif; }
+        .hub-search input:focus { outline: none; border-color: #c8a96e; }
+        .hub-section-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid #c8a96e; display: inline-block; }
+        .hub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 4rem; }
+        .hub-card { border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; transition: box-shadow 0.3s; }
+        .hub-card:hover { box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+        .hub-card-content { padding: 1.5rem; }
+        .hub-card-tag { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 0.5rem; }
+        .hub-card-tag.free { color: #2e7d32; }
+        .hub-card-tag.premium { color: #c8a96e; }
+        .hub-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.4; }
+        .hub-card h3 a { color: #1a1a1a; text-decoration: none; }
+        .hub-card h3 a:hover { color: #c8a96e; }
+        .hub-card-author { font-size: 0.8rem; color: #888; margin-bottom: 0.5rem; }
+        .hub-card-excerpt { font-size: 0.9rem; color: #555; line-height: 1.6; }
+        .hub-submit { background: #f8f8f8; border-radius: 8px; padding: 2rem; text-align: center; margin-top: 3rem; }
+        .hub-submit h3 { margin-bottom: 0.5rem; }
+        .hub-submit p { color: #666; margin-bottom: 1.5rem; }
+        .hub-submit a { display: inline-block; padding: 0.8rem 2rem; background: #c8a96e; color: #fff; text-decoration: none; border-radius: 50px; font-weight: 600; }
+        .hub-footer { text-align: center; padding: 2rem; border-top: 1px solid #e0e0e0; color: #999; font-size: 0.8rem; margin-top: 3rem; }
+        .hub-footer a { color: #c8a96e; text-decoration: none; }
+        @media (max-width: 768px) { .hub-grid { grid-template-columns: 1fr; } .hub-stats { flex-wrap: wrap; } }
+    </style>
+</head>
+<body>
+
+    <nav class="hub-nav">
+        <div class="hub-nav-inner">
+            <a href="index.html" class="hub-logo">DAIGU<span> Research Hub</span></a>
+            <div class="hub-nav-links">
+                <a href="index.html#free">Gratuit</a>
+                <a href="index.html#premium">Premium</a>
+                <a href="index.html#submit">Publier</a>
+                <a href="../index.html" class="hub-nav-back">← DAIGU</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hub-container">
+        <header class="hub-header">
+            <h1>DAIGU Research Hub</h1>
+            <p>La recherche qui construit la souveraineté. Articles scientifiques et techniques par les ingénieurs de DAIGU.</p>
+        </header>
+
+        <div class="hub-stats">
+            <div class="hub-stat"><div class="hub-stat-number">3</div><div class="hub-stat-label">Articles publiés</div></div>
+            <div class="hub-stat"><div class="hub-stat-number">0</div><div class="hub-stat-label">Articles premium</div></div>
+            <div class="hub-stat"><div class="hub-stat-number">∞</div><div class="hub-stat-label">Ingénieurs contributeurs</div></div>
+        </div>
+
+        <div class="hub-search">
+            <input type="text" placeholder="Rechercher un article, un thème, un auteur..." id="hubSearch">
+        </div>
+
+        <h2 class="hub-section-title" id="free">Articles gratuits</h2>
+        <div class="hub-grid">
+            <article class="hub-card">
+                <div class="hub-card-content">
+                    <div class="hub-card-tag free">Gratuit</div>
+                    <h3><a href="free/pourquoi-daigu-os.html">Pourquoi nous construisons notre propre OS</a></h3>
+                    <div class="hub-card-author">Par le Cerveau · 1 Mai 2026</div>
+                    <p class="hub-card-excerpt">La souveraineté numérique ne se négocie pas. Elle se compile. Retour sur la décision fondatrice de DAIGU CORE SYSTEMS.</p>
+                </div>
+            </article>
+            <article class="hub-card">
+                <div class="hub-card-content">
+                    <div class="hub-card-tag free">Gratuit</div>
+                    <h3><a href="free/lecon-simandou.html">La leçon du Simandou : Former avant d'extraire</a></h3>
+                    <div class="hub-card-author">Par le Cerveau · 15 Avril 2026</div>
+                    <p class="hub-card-excerpt">Le plus grand projet minier d'Afrique nous enseigne une vérité : sans transfert de compétences, il n'y a pas de développement durable.</p>
+                </div>
+            </article>
+            <article class="hub-card">
+                <div class="hub-card-content">
+                    <div class="hub-card-tag free">Gratuit</div>
+                    <h3><a href="free/cybersecurite-tropiques.html">Cybersécurité sous les tropiques</a></h3>
+                    <div class="hub-card-author">Par le Cerveau · 22 Février 2026</div>
+                    <p class="hub-card-excerpt">Pourquoi les standards de sécurité occidentaux échouent entre 30°C et 90% d'humidité, et comment DAIGU y répond.</p>
+                </div>
+            </article>
+        </div>
+
+        <h2 class="hub-section-title" id="premium">Articles premium</h2>
+        <div class="hub-grid">
+            <article class="hub-card">
+                <div class="hub-card-content">
+                    <div class="hub-card-tag premium">Premium</div>
+                    <h3>Architecture du micro-noyau DAIGU OS</h3>
+                    <div class="hub-card-author">Par DAIGU CORE SYSTEMS · À venir</div>
+                    <p class="hub-card-excerpt">Spécifications techniques détaillées du scheduler temps réel et de la gestion mémoire du noyau DAIGU.</p>
+                </div>
+            </article>
+            <article class="hub-card">
+                <div class="hub-card-content">
+                    <div class="hub-card-tag premium">Premium</div>
+                    <h3>Standard TROPIC-PROOF : cahier des charges</h3>
+                    <div class="hub-card-author">Par DAIGU ELECTRONICS · À venir</div>
+                    <p class="hub-card-excerpt">Spécifications complètes pour la certification des équipements électroniques en zone tropicale.</p>
+                </div>
+            </article>
+            <article class="hub-card">
+                <div class="hub-card-content">
+                    <div class="hub-card-tag premium">Premium</div>
+                    <h3>Valorisation des résidus de bauxite</h3>
+                    <div class="hub-card-author">Par DAIGU ENERGY LABS · À venir</div>
+                    <p class="hub-card-excerpt">Procédés chimiques de transformation des boues rouges en composants céramiques pour l'électronique.</p>
+                </div>
+            </article>
+        </div>
+
+        <div class="hub-submit" id="submit">
+            <h3>Vous êtes ingénieur DAIGU ?</h3>
+            <p>Soumettez votre article de recherche. Le Comité Éditorial de DLC le révisera sous 7 jours.</p>
+            <a href="mailto:research@daigu-technology.com">Soumettre un article</a>
+        </div>
+    </div>
+
+    <footer class="hub-footer">
+        <p>DAIGU Research Hub — <a href="../index.html">DAIGU TECHNOLOGY</a> — La Guinée des Lumières</p>
+    </footer>
+
+    <script>
+        // Barre de recherche simple
+        document.getElementById('hubSearch').addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            document.querySelectorAll('.hub-card').forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(query) ? '' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
