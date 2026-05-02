@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DAIGU TECHNOLOGY — Services technologiques souverains. OS, Cloud, Cybersécurité, Énergie, Électronique.">
+    <title>Services — DAIGU TECHNOLOGY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --bg: #000000; --bg-card: #0a0a0a; --text: #ffffff; --text-secondary: #999999; --accent: #c8a96e; --accent-green: #00d4aa; --border: rgba(255,255,255,0.08); --font: 'Inter', sans-serif; }
+        body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.7; }
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(0,0,0,0.9); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+        .nav-inner { max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.5rem; font-weight: 800; color: var(--text); text-decoration: none; letter-spacing: 3px; }
+        .nav-logo span { color: var(--accent); font-weight: 400; font-size: 1rem; letter-spacing: 1px; }
+        .nav-back { color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 600; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 6rem 2rem 3rem; }
+        .hero { text-align: center; margin-bottom: 4rem; }
+        .hero-badge { display: inline-block; font-size: 0.7rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--accent); border: 1px solid rgba(200,169,110,0.3); padding: 0.4rem 1.2rem; border-radius: 50px; margin-bottom: 1.5rem; }
+        h1 { font-size: clamp(2.2rem, 4vw, 3.5rem); font-weight: 900; margin-bottom: 0.5rem; }
+        h1 span { color: var(--accent); }
+        .hero p { color: var(--text-secondary); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        .service-section { margin-bottom: 5rem; }
+        .service-section h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .service-section h2 .dot { color: var(--accent); }
+        .service-section > p { color: var(--text-secondary); margin-bottom: 2rem; }
+        .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .service-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; transition: border-color 0.3s, transform 0.3s; }
+        .service-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+        .service-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.8rem; }
+        .service-card p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
+        .service-card .tag { display: inline-block; font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-top: 1rem; }
+        .cta { text-align: center; margin-top: 4rem; padding: 3rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; }
+        .cta h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+        .cta p { color: var(--text-secondary); margin-bottom: 2rem; }
+        .btn { display: inline-block; padding: 1rem 2.5rem; background: var(--accent); color: #000; text-decoration: none; border-radius: 50px; font-weight: 700; font-size: 0.95rem; letter-spacing: 1px; transition: background 0.3s; }
+        .btn:hover { background: #b8953d; }
+        .footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border); color: var(--text-secondary); font-size: 0.75rem; }
+        .footer a { color: var(--accent); }
+        @media (max-width: 768px) { .service-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">DAIGU<span> · TECHNOLOGY</span></a>
+            <a href="index.html" class="nav-back">← Retour</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <section class="hero">
+            <div class="hero-badge">Ce que nous faisons</div>
+            <h1>Nos <span>Services</span></h1>
+            <p>Des solutions technologiques souveraines pour les États, les entreprises et les industries africaines.</p>
+        </section>
+
+        <!-- DAIGU OS -->
+        <section class="service-section">
+            <h2><span class="dot">01</span> DAIGU OS — Systèmes d'exploitation souverains</h2>
+            <p>Du noyau temps réel à l'interface utilisateur, nous concevons des OS sur mesure pour chaque terminal.</p>
+            <div class="service-grid">
+                <div class="service-card"><h3>OS Embarqué IoT</h3><p>Noyau temps réel pour capteurs, drones et objets connectés industriels.</p><span class="tag">CORE SYSTEMS</span></div>
+                <div class="service-card"><h3>OS Desktop</h3><p>Système complet pour PC et stations de travail professionnelles.</p><span class="tag">CORE SYSTEMS</span></div>
+                <div class="service-card"><h3>OS Mobile</h3><p>Système optimisé pour smartphone et tablette sous architecture ARM64.</p><span class="tag">CORE SYSTEMS</span></div>
+                <div class="service-card"><h3>OS Console</h3><p>Système dédié jeu vidéo avec API graphique propriétaire.</p><span class="tag">CORE SYSTEMS</span></div>
+                <div class="service-card"><h3>OS Automotive</h3><p>Système pour véhicule électrique avec interface tableau de bord intégrée.</p><span class="tag">CORE SYSTEMS</span></div>
+                <div class="service-card"><h3>OS TV & Montre</h3><p>Systèmes légers pour téléviseurs connectés et wearables.</p><span class="tag">CORE SYSTEMS</span></div>
+            </div>
+        </section>
+
+        <!-- CLOUD & SHIELD -->
+        <section class="service-section">
+            <h2><span class="dot">02</span> DAIGU Cloud & Shield — Infrastructure et cybersécurité</h2>
+            <p>Protection et hébergement des données critiques sur le sol africain.</p>
+            <div class="service-grid">
+                <div class="service-card"><h3>Cloud National</h3><p>Hébergement souverain pour administrations, banques et hôpitaux.</p><span class="tag">CLOUD & SHIELD</span></div>
+                <div class="service-card"><h3>Antivirus National</h3><p>Protection de tous les terminaux publics sous DAIGU OS.</p><span class="tag">CLOUD & SHIELD</span></div>
+                <div class="service-card"><h3>Pare-feu National</h3><p>Filtrage du trafic entrant et sortant du réseau guinéen.</p><span class="tag">CLOUD & SHIELD</span></div>
+                <div class="service-card"><h3>Logiciel de renseignement</h3><p>Surveillance des menaces et analyse prédictive des cyberattaques.</p><span class="tag">CLOUD & SHIELD</span></div>
+                <div class="service-card"><h3>Protocoles de sécurité</h3><p>Standards cryptographiques et protocoles de communication sécurisés.</p><span class="tag">CLOUD & SHIELD</span></div>
+                <div class="service-card"><h3>Audit de sécurité</h3><p>Pentest, analyse de vulnérabilités et rapports complets.</p><span class="tag">CLOUD & SHIELD</span></div>
+            </div>
+        </section>
+
+        <!-- ENERGY LABS -->
+        <section class="service-section">
+            <h2><span class="dot">03</span> DAIGU Energy Labs — Stockage et énergie</h2>
+            <p>Solutions énergétiques conçues pour le climat et les besoins africains.</p>
+            <div class="service-grid">
+                <div class="service-card"><h3>Micro-grid solaire</h3><p>Conception et déploiement de réseaux électriques autonomes pour zones rurales.</p><span class="tag">ENERGY LABS</span></div>
+                <div class="service-card"><h3>Batterie stationnaire 10 kWh</h3><p>Stockage longue durée pour data centers, hôpitaux et infrastructures critiques.</p><span class="tag">ENERGY LABS</span></div>
+                <div class="service-card"><h3>Audit énergétique</h3><p>Optimisation de la consommation des infrastructures publiques et privées.</p><span class="tag">ENERGY LABS</span></div>
+            </div>
+        </section>
+
+        <!-- ELECTRONICS -->
+        <section class="service-section">
+            <h2><span class="dot">04</span> DAIGU Electronics — Matériel tropicalisé</h2>
+            <p>Équipements conçus pour résister aux conditions extrêmes des tropiques.</p>
+            <div class="service-grid">
+                <div class="service-card"><h3>Tablette durcie TROPIC-PROOF</h3><p>Conçue pour l'agriculture, les mines et la logistique. Résiste à 45°C et 95% d'humidité.</p><span class="tag">ELECTRONICS</span></div>
+                <div class="service-card"><h3>Drone de surveillance</h3><p>Cartographie aérienne, sécurité des sites miniers, surveillance agricole.</p><span class="tag">ELECTRONICS</span></div>
+                <div class="service-card"><h3>Prototypage électronique</h3><p>Conception de circuits imprimés et intégration pour clients industriels.</p><span class="tag">ELECTRONICS</span></div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta">
+            <h3>Intéressé par nos services ?</h3>
+            <p>Contactez-nous pour un devis ou une démonstration technique.</p>
+            <a href="index.html#kontakt" class="btn">Demander un devis</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>DAIGU TECHNOLOGY — <a href="index.html">La Guinée des Lumières</a></p>
+    </footer>
+
+</body>
+</html>
